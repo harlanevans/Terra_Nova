@@ -3,7 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '>= 2.5.1'
 
-gem 'wdm', '>= 0.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -36,6 +35,11 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry'
   gem 'faker'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers' 
+  gem 'database_cleaner'
+  gem 'simplecov'
+  gem 'factory_bot_rails'
 
 end
 
