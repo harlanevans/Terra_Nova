@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  adults: 1
+  kids: 1
+  start_date: 2019-06-25
+  end_date: 2019-06-25
+  belongs_to: 
+
+two:
+  adults: 1
+  kids: 1
+  start_date: 2019-06-25
+  end_date: 2019-06-25
+  belongs_to: 
