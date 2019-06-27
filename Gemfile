@@ -35,6 +35,11 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry'
   gem 'faker'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers' 
+  gem 'database_cleaner'
+  gem 'simplecov'
+  gem 'factory_bot_rails'
 
 end
 
