@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Menu } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import { AuthConsumer } from '../../providers/AuthProvider';
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
+
 
 class Navbar extends Component {
 
@@ -12,56 +14,60 @@ class Navbar extends Component {
     if (user) {
       return(
         
-        <Menu.Menu position='right'>
-          <Menu.Item
+          <Link to='/'
             name='logout'
             onClick={() => handleLogout(history)}
-          />
-        </Menu.Menu>
+          >Logout</Link>
       )
     } else {
       return(
-        <Menu.Menu position='right'>
-          <Link to='/login'>
-            <Menu.Item
+        <>
+        <div className="navbar1">
+          <ul>
+            <li>
+          <Link to='/login'
               name='login'
               id='login'
-              active={location.pathname === '/login'}
-            />
-          </Link>
-          <Link to='/register'>
-            <Menu.Item
+              // active={location.pathname === '/login'}
+            >Login</Link>
+            </li>
+              <li>
+          <Link to='/register'
               name='register'
               id='register'
-              active={location.pathname === '/register'}
-            />
-          </Link>
-
-        </Menu.Menu>
+              // active={location.pathname === '/register'}
+            >Register</Link>
+            </li>
+          </ul>
+      </div>
+        </>
       )
     }
   }
 
   render() {
     return(
-      <div>
-        <Menu secondary pointing>
-          <Link to='/'>
-            <Menu.Item 
-              name='home'
-              id='home'
-              active={this.props.location.pathname === '/'}
-            />
-          </Link>
-          <Link smooth to="/#hash">
-            <Menu.Item
-              name='hash'
-              id='hash'
-              active={this.props.location.pathname === '/#hash'}
-            />
-          </Link>
-          { this.rightNavItems() }
-        </Menu>
+      <div className="navbar1">
+          <ul>
+            <li>
+              <HashLink smooth to="/#home">HOME</HashLink>
+            </li>
+            <li>
+              <HashLink smooth to="/#room_rate">ROOM & RATE</HashLink>
+            </li>
+            <li>
+              <Link to="/reservation">RESERVATION</Link>
+            </li>
+            <li>
+              <HashLink smooth to="/#gallery">GALLERY</HashLink>
+            </li>
+            <li>
+              <HashLink smooth to="/#about">ABOUT</HashLink>
+            </li>
+            <li>
+              <Link to="/contact">CONTACT</Link>
+            </li>
+          </ul>
       </div>
     )
   }
