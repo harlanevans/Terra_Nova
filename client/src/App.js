@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import { Container } from 'semantic-ui-react';
 import Navbar from './components/shared/Navbar';
 import NoMatch from './components/shared/NoMatch';
-import Home from './components/shared/Home';
+import Home from './components/shared/Landing_Page/Home';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import FetchUser from './components/auth/FetchUser';
