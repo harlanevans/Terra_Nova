@@ -1,10 +1,10 @@
 import React from 'react';
-import { Divider, Grid, Image, Segment} from 'semantic-ui-react'
+import { Divider, Grid, Image, Segment, Container} from 'semantic-ui-react'
 
 const About_Us = () => {
 
   return (
-<>
+<Container>
 <Grid columns={2} relaxed='very'>
   <Grid.Column>
       <h2>About Us</h2>
@@ -60,7 +60,7 @@ const About_Us = () => {
     </Segment>
   </Grid.Column>
 </Grid>
-</>
+</Container>
     )
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Carousel from './Carousel';
+import Controlled_Carousel from './Main_Carousel';
 import Rooms_Home from './Rooms_Home';
 import About_Us from './About_Us';
 import Review_Carousel from './Review_Carousel';
@@ -11,7 +11,7 @@ import Footer from './Footer';
 const Home = () => (
   <>
   <div id="home"></div>
-  <Carousel />
+  <Controlled_Carousel />
   <div id="room_rate"></div>
   <Rooms_Home/>
   <div id="about"></div>
