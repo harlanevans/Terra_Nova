@@ -8,6 +8,7 @@ import News from './News';
 import Gallery from './Gallery';
 import Footer from './Footer';
 import Calendar from 'react-calendar';
+import ReservationForm from '../../reservations/ReservationForm';
 
 const Home = () => (
   <>
@@ -22,6 +23,7 @@ const Home = () => (
   <News/>
   <div id="gallery"></div>
   <Gallery/>
+  <ReservationForm />
   <Calendar />
   <Footer/>
   </>
