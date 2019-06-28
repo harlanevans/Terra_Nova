@@ -44,6 +44,7 @@ code {
   color: skyblue;
 }
 
+
 .section {
  display: flex;
  flex-direction: column;
@@ -53,4 +54,41 @@ code {
  width: 100%;
  height: 100vh;
  /* scroll-snap-align: start; */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 225px;
+  background-color: #F5F5F5;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+.gold-label {
+  color: #E3CD7F;
+  text-transform: uppercase;
+}
+
+#adult {
+  width: 50px;
+}
+
+#child {
+  width: 50px;
+}
+
+.button {
+  background-color: #E3CD7F;
+  color: white;
+  padding: 10px 10px;
+  width: 200px;
+  text-transform: uppercase;
+}
+
+.button-div {
+  text-align: center;
+}
+
+.label-div {
+  text-transform: uppercase;
 }
