@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Image, Container } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import { AuthConsumer } from '../../providers/AuthProvider';
@@ -22,7 +22,7 @@ class Navbar extends Component {
     } else {
       return(
         <>
-        <div className="navbar1">
+        <div className="navbar">
           <ul>
             <li>
           <Link to='/login'
@@ -47,7 +47,10 @@ class Navbar extends Component {
 
   render() {
     return(
-      <div className="navbar1">
+    <Container>
+      <div className="navbar" verticalAlign='bottom'>
+        <Image src = '../../../images/TN_horizontal_white_transparent-p-500.png'
+              size='tiny'/>
           <ul>
             <li>
               <HashLink smooth to="/#home">HOME</HashLink>
@@ -69,6 +72,7 @@ class Navbar extends Component {
             </li>
           </ul>
       </div>
+      </Container>
     )
   }
 }

@@ -34,7 +34,7 @@ class Demo {
     if (!options) {
       return;
     }
-
+    
     const filterButtons = Array.from(options.children);
     const onClick = this._handleFilterClick.bind(this);
     filterButtons.forEach((button) => {
@@ -46,9 +46,9 @@ class Demo {
     const btn = evt.currentTarget;
     const isActive = btn.classList.contains('active');
     const btnGroup = btn.getAttribute('data-group');
-
+    
     this._removeActiveClassFromChildren(btn.parentNode);
-
+    
     let filterGroup;
     if (isActive) {
       btn.classList.remove('active');
@@ -57,14 +57,12 @@ class Demo {
       btn.classList.add('active');
       filterGroup = btnGroup;
     }
-
+    
     this.shuffle.filter(filterGroup);
   }
 
   _removeActiveClassFromChildren(parent) {
-    const {
-      children
-    } = parent;
+    const { children } = parent;
     for (let i = children.length - 1; i >= 0; i--) {
       children[i].classList.remove('active');
     }
@@ -88,21 +86,19 @@ class Demo {
         button.classList.remove('active');
       }
     });
-
+    
     // Create the sort options to give to Shuffle.
-    const {
-      value
-    } = evt.target;
+    const { value } = evt.target;
     let options = {};
-
+    
     function sortByDate(element) {
       return element.getAttribute('data-created');
     }
-
+    
     function sortByTitle(element) {
       return element.getAttribute('data-title').toLowerCase();
     }
-
+    
     if (value === 'date-created') {
       options = {
         reverse: true,
