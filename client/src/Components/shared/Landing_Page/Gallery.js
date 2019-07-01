@@ -1,12 +1,38 @@
 import React from 'react';
+import { Container, Header, Icon, Grid, Divider } from 'semantic-ui-react'
 import "./Gallery.css";
+
 
 
 
 const Gallery = () => {
 
   return (
-    <div>
+    <div style={{ textAlign: 'center', backgroundColor: "#73A299" }}>
+      <Container>
+        <Grid>
+          <Grid.Row>
+            <Grid.Column width={6} style={{ textAlign: 'center'}}></Grid.Column>
+            <Grid.Column width={4} style={{ textAlign: 'center'}}>
+              <Header as='h2' style={{ color: 'white' }}>Our Gallery</Header>
+                  <Divider horizontal>
+                    <Icon name='square full' size='large' color='brown' />
+                  </Divider>              
+            </Grid.Column>
+            <Grid.Column width={6} style={{ textAlign: 'center'}}></Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <div className='gallery_nav'>
+              <ul>
+                <li>HOTEL & GROUND</li>
+                <li>ROOMSUITE</li>
+                <li>BATHROOM</li>
+                <li>DINING</li>
+              </ul>
+            </div>
+          </Grid.Row>
+        </Grid>
+      </Container>
 
 
 

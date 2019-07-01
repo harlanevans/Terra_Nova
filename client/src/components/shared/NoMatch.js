@@ -1,12 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Header} from 'semantic-ui-react'
+import { Container, Message} from 'semantic-ui-react'
 
 const NoMatch = () => (
   <div>
     <Container className="noMatch">
-      <Header>404 page not found</Header>
-      <Link to = '/'> Home </Link>
+
+      <Message>
+        <Message.Header>404 page not found</Message.Header>
+        <p>
+          <Link to = '/'> Home </Link>
+        </p>
+      </Message>
+
+      
     </Container>
   </div>
 ) 

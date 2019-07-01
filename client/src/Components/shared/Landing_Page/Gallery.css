@@ -47,6 +47,31 @@ p {
   It will set it for you, but it'll cause another style recalculation and layout.
   AKA worse performance - so just set it here
  */
+
+
+.gallery_nav ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  /* justify-content: right; */
+}
+
+.gallery_nav ul li {
+  margin: 0 1rem;
+  padding: 0 1rem;
+  color: white;
+}
+
+.gallery_nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+.gallery_nav ul li a:hover {
+  color: skyblue;
+}
+
 .my-shuffle-container {
   position: relative;
   overflow: hidden;

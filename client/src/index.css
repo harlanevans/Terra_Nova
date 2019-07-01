@@ -55,6 +55,18 @@ code {
   color: skyblue;
 }
 
+.footerList {
+  padding-top: 20px !important;
+}
+
+.footerList a{
+  color: white !important;
+}
+
+.footerList a:hover {
+  color: skyblue !important;
+}
+
 .section {
  display: flex;
  flex-direction: column;
