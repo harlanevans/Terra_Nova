@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/macbookuser/Desktop/Terra_Nova/Terra_Nova/app/models/reservation.rb": [
+      "/Users/macbookuser/Desktop/Terra_Nova/Terra_Nova/app/models/cabin.rb": [
         1,
         1,
         null
@@ -10,13 +10,8 @@
         1,
         1,
         null
-      ],
-      "/Users/macbookuser/Desktop/Terra_Nova/Terra_Nova/app/models/cabin.rb": [
-        1,
-        1,
-        null
       ]
     },
-    "timestamp": 1561597463
+    "timestamp": 1561601307
   }
 }
