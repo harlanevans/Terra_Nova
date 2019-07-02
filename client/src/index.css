@@ -12,9 +12,12 @@ code {
     monospace;
 }
 
+.noMatch {
+  margin-top: 50px;
+}
 
-.navbar1 {
-  /* position: fixed; */
+.navbar {
+  position: fixed;
   top: 0;
   z-index: 1;
   display: flex;
@@ -22,24 +25,100 @@ code {
   height: 60px;
 }
 
-.navbar1 ul {
+.navbar ul {
   display: flex;
   list-style: none;
   width: 100%;
-  justify-content: center;
+  justify-content: right;
 }
 
-.navbar1 ul li {
+.navbar ul li {
   margin: 0 1rem;
   padding: 1rem;
 }
 
-.navbar1 ul li a {
+.navbar ul li a {
   text-decoration: none;
   text-transform: uppercase;
-  color: grey;
+  color: white;
 }
 
-.navbar1 ul li a:hover {
+.navbar ul li a:hover {
   color: skyblue;
 }
+
+.white a{
+  color: white;
+}
+
+.white a:hover {
+  color: skyblue;
+}
+
+<<<<<<< HEAD
+=======
+
+.footerList {
+  padding-top: 20px !important;
+}
+
+.footerList a{
+  color: white !important;
+}
+
+.footerList a:hover {
+  color: skyblue !important;
+}
+
+
+.section {
+ display: flex;
+ flex-direction: column;
+ /* align-items: center; */
+ justify-content: center;
+ /* text-align: center; */
+ width: 100%;
+ height: 100vh;
+ /* scroll-snap-align: start; */
+}
+
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 225px;
+  background-color: #F5F5F5;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+.gold-label {
+  color: #E3CD7F;
+  text-transform: uppercase;
+}
+
+#adult {
+  width: 50px;
+}
+
+#child {
+  width: 50px;
+}
+
+.button {
+  background-color: #E3CD7F;
+  color: white;
+  padding: 10px 10px;
+  width: 200px;
+  text-transform: uppercase;
+}
+
+.button-div {
+  text-align: center;
+}
+
+.label-div {
+  text-transform: uppercase;
+}
+>>>>>>> f7aa0e917ce70b7d339528cb528df1df81d5acc2
