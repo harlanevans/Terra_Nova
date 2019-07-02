@@ -1,11 +1,41 @@
 import React, { Component } from 'react';
 import { Form, Divider } from 'semantic-ui-react';
+import axios from 'axios';
 
 class ReservationForm extends Component {
+  state= { cabins: '', start_date: '', end_date: '', 
+   kids: '', adults: ''}
+
+  handleChange = (e) => {
+    const { name, value } = e.target
+    this.setState({ [name]: value })
+  }
+
+  componentDidMount() {
+    axios.post('/api/cabins')
+    .then( res => {
+      const { cabins } = this.state
+        this.setState({ cabins: [...cabins, res.data ]})
+    })
+    .catch( err => {
+      console.log(err)
+    })
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const { add } = this.props
+    add(this.state)
+    //clear form
+    this.setState({ cabins: '', start_date: '', end_date: ''
+    , kids: '', adults: ''})
+  }
+
   render() {
     return (
       <>
-      <Form className="form"
+      <Form onSubmit={this.handleSubmit}
+      className="form"
       size={"small"}
       widths={"equal"}
       >
@@ -16,7 +46,7 @@ class ReservationForm extends Component {
         <Form.Field>
           <div class="label-div">
           <label>Arrive</label><br />
-          <input placeholder="todays date"/>
+          <input placeholder="todays date" onChange={this.handleChange}/>
           </div>
         </Form.Field>
         <Form.Field>
@@ -39,7 +69,7 @@ class ReservationForm extends Component {
         <Form.Field>
         <div class="label-div">
           <label>Departure</label><br />
-          <input placeholder="leave date"/>
+          <input placeholder="leave date" onChange={this.handleChange}/>
           </div>
         </Form.Field>
         <div class="gold-label">
@@ -47,8 +77,8 @@ class ReservationForm extends Component {
         </div>
         <Form.Field>
         <div class="label-div">
-          <label>Rooms</label><br />
-          <select>
+          <label>Cabins</label><br />
+          <select onChange={this.handleChange}>
             <option value="1">1</option>
             <option value="2">2</option>
           </select>
@@ -59,12 +89,12 @@ class ReservationForm extends Component {
           <label>Room 1</label>
           <span style={styles.flex_select}>
           Adults
-          <select name="adult" id="adult">
+          <select name="adult" id="adult" onChange={this.handleChange}>
             <option value="1">1</option>
             <option value="2">2</option>
           </select>
           Kids
-          <select name="child" id="child">
+          <select name="child" id="child" onChange={this.handleChange}>
             <option value="1">1</option>
             <option value="2">2</option>
           </select>
@@ -76,12 +106,12 @@ class ReservationForm extends Component {
           <label>Room 2</label>
           <span style={styles.flex_select}>
           Adults
-          <select name="adult" id="adult">
+          <select name="adult" id="adult" onChange={this.handleChange}>
             <option value="1">1</option>
             <option value="2">2</option>
           </select>
           Kids
-          <select name="child" id="child">
+          <select name="child" id="child" onChange={this.handleChange}>
             <option value="1">1</option>
             <option value="2">2</option>
           </select>
