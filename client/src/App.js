@@ -13,20 +13,14 @@ const App = () => (
   <>
     <Navbar />
     <FetchUser>
-<<<<<<< HEAD
       {/* <Container> */}
-=======
->>>>>>> f7aa0e917ce70b7d339528cb528df1df81d5acc2
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
           <Route component={NoMatch} />
         </Switch>
-<<<<<<< HEAD
       {/* </Container> */}
-=======
->>>>>>> f7aa0e917ce70b7d339528cb528df1df81d5acc2
     </FetchUser>
   </>
 )

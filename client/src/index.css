@@ -55,8 +55,6 @@ code {
   color: skyblue;
 }
 
-<<<<<<< HEAD
-=======
 
 .footerList {
   padding-top: 20px !important;
@@ -78,9 +76,8 @@ code {
  justify-content: center;
  /* text-align: center; */
  width: 100%;
- height: 100vh;
+ height: 100vh;}
  /* scroll-snap-align: start; */
-}
 
 
 
@@ -121,4 +118,3 @@ code {
 .label-div {
   text-transform: uppercase;
 }
->>>>>>> f7aa0e917ce70b7d339528cb528df1df81d5acc2

@@ -1,14 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Divider, Grid, Image, Segment, Container} from 'semantic-ui-react'
-=======
 import { Grid, Image, Segment, Placeholder, Container, Header } from 'semantic-ui-react'
->>>>>>> f7aa0e917ce70b7d339528cb528df1df81d5acc2
+
 
 const About_Us = () => {
 
   return (
-<<<<<<< HEAD
 <Container>
 <Grid columns={2} relaxed='very'>
   <Grid.Column>
@@ -66,7 +62,6 @@ const About_Us = () => {
   </Grid.Column>
 </Grid>
 </Container>
-=======
     <div className="section" style={{ textAlign: 'center', backgroundColor: "#73A288" }}>
       <Container>
         <Grid columns={2} relaxed='very'>
@@ -132,7 +127,6 @@ const About_Us = () => {
         </Grid>
       </Container>
     </div>
->>>>>>> f7aa0e917ce70b7d339528cb528df1df81d5acc2
     )
 }
 
