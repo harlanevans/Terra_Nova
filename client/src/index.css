@@ -16,15 +16,54 @@ code {
   margin-top: 50px;
 }
 
+.carouselTitle {
+  color: white;
+  font-size: 4em;
+  position: relative;
+  bottom: 550x;
+  z-index: 5;
+  padding-bottom: 600px;
+}
+
+.carouselTitle2 {
+  color: white;
+  font-size: 4em;
+  position: relative;
+  bottom: 600px;
+  z-index: 4;
+}
+
+.carouselSubtTitle {
+  color: white;
+  font-size: 2em;
+  position: relative;
+  bottom: 500px;
+  z-index: 3;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
 .navbar {
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   width: 100%;
-  height: 60px;
+  height: 30px;
 }
 
+.navbar_item a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white !important;
+}
+
+.navbar_item a:hover {
+  color: skyblue !important;
+}
+
+*/
+/* 
 .navbar ul {
   display: flex;
   list-style: none;
@@ -45,7 +84,7 @@ code {
 
 .navbar ul li a:hover {
   color: skyblue;
-}
+} */
 
 .white a{
   color: white;

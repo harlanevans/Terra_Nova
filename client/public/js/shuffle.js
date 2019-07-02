@@ -1,5 +1,6 @@
-var Shuffle = window.Shuffle;
+require ('shufflejs');
 
+var Shuffle = window.Shuffle;
 class Demo {
   constructor(element) {
     this.element = element;
