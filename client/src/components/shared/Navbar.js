@@ -47,32 +47,32 @@ class Navbar extends Component {
 
   render() {
     return(
-    <Container>
-      <div className="navbar" verticalAlign='bottom'>
-        <Image src = '../../../images/TN_horizontal_white_transparent-p-500.png'
-              size='tiny'/>
-          <ul>
-            <li>
-              <HashLink smooth to="/#home">HOME</HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="/#room_rate">ROOM & RATE</HashLink>
-            </li>
-            <li>
-              <Link to="/reservation">RESERVATION</Link>
-            </li>
-            <li>
-              <HashLink smooth to="/#gallery">GALLERY</HashLink>
-            </li>
-            <li>
-              <HashLink smooth to="/#about">ABOUT</HashLink>
-            </li>
-            <li>
-              <Link to="/contact">CONTACT</Link>
-            </li>
-          </ul>
-      </div>
-      </Container>
+      <Menu secondary className="navbar">
+        <Container>
+        <Menu.Item className="navbar_item">
+          <Image src = '../../../images/TN_horizontal_white_transparent-p-500.png' size='tiny'/>
+        </Menu.Item>
+        <Menu.Item className="navbar_item">
+          <HashLink smooth to="/#home">HOME</HashLink>
+        </Menu.Item>
+        <Menu.Item className="navbar_item">
+          <HashLink smooth to="/#room_rate">ROOM & RATE</HashLink>
+        </Menu.Item>
+        <Menu.Item className="navbar_item">
+          <Link to="/reservation">RESERVATION</Link>
+        </Menu.Item>
+        <Menu.Item className="navbar_item">
+          <HashLink smooth to="/#gallery">GALLERY</HashLink>
+        </Menu.Item>
+        <Menu.Item className="navbar_item">
+          <HashLink smooth to="/#about">ABOUT</HashLink>
+        </Menu.Item>
+        <Menu.Item className="navbar_item">
+          <Link to="/contact">CONTACT</Link>
+        </Menu.Item>
+        </Container>
+      </Menu>
+
     )
   }
 }

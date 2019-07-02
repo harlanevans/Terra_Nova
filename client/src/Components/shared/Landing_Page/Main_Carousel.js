@@ -25,6 +25,7 @@ class Main_Carousel extends React.Component {
     const { index, direction } = this.state;
 
     return (
+      < div className = "section">
     <Carousel
       activeIndex={index}
       direction={direction}
@@ -36,13 +37,15 @@ class Main_Carousel extends React.Component {
     <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://images.unsplash.com/photo-1482463084673-98272196658a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
-            alt="First slide"
-            style={{width: '100%', height: '25rem'}}
+            src="https://images.unsplash.com/photo-1530604019387-c6ca7cced91d?ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
+            alt="Welcome to Terra Nova"
+            style={{width: '100%', height: '100%'}}
             
           />
        <Carousel.Caption>
-            <h3> First slide label</h3>
+            <div className="carouselTitle"> Welcome to Terra Nova</div>
+            <div className="carouselTitle2"> Cabins</div>
+            <div className="carouselSubtTitle"> ------HOTELS  &  RESORTS------</div>
             <p>Terra nova cabins</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -50,9 +53,9 @@ class Main_Carousel extends React.Component {
     <Carousel.Item>
       <img
         className="d-block w-100"
-        src="https://images.unsplash.com/photo-1535050725463-f21a8ede4b4a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1584&q=80"
+        src="https://images.unsplash.com/photo-1482463084673-98272196658a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
         alt="Second slide"
-        style={{width: '100%', height: '25rem'}}
+        style={{width: '100%', height: '100%'}}
        />
     
     <Carousel.Caption>
@@ -66,7 +69,7 @@ class Main_Carousel extends React.Component {
       className="d- block w-100"
       src="https://images.unsplash.com/photo-1504643039591-52948e3ddb47?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
       alt="Third Slide"
-      style={{width: '100%', height: '25rem'}}
+      style={{width: '100%', height: '100%'}}
       />
     <Carousel.Caption>
       <h3> Third label </h3>
@@ -74,6 +77,7 @@ class Main_Carousel extends React.Component {
     </Carousel.Caption>
     </Carousel.Item>
     </Carousel>
+    </div>
 
     );
   }
