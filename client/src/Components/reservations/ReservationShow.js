@@ -16,19 +16,6 @@ class ReservationShow extends Component {
     })
   }
 
-  addReservation = (cabin) => {
-    //axios post to backend
-    axios.post('/api/cabins', { cabin })
-    //add cabin to frontend promise handling
-    .then( res => {
-      const { cabins } = this.state
-      this.setState({ cabins: [...cabins, res.data ]})
-    })
-    .catch( err => {
-      console.log(err)
-    })
-  }
-
   deleteReservation = (cabin) => {
     //delete in db axios  /api/cabins/${cabin.id}
     axios.delete(`/api/cabins/${cabin.id}`)
