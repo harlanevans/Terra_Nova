@@ -7,6 +7,7 @@ import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import FetchUser from './components/auth/FetchUser';
 import ProtectRoute from './components/auth/ProtectedRoute';
+import ReservationShow from './components/reservations/ReservationShow';
 
 
 const App = () => (
@@ -18,6 +19,7 @@ const App = () => (
           <Route exact path='/' component={Home} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
+          <Route exact path='/reservation' component={ReservationShow} />
           <Route component={NoMatch} />
         </Switch>
       {/* </Container> */}

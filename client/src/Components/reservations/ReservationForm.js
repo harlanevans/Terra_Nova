@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Divider } from 'semantic-ui-react';
 import axios from 'axios';
-
+import Reservation from './Reservation';
 class ReservationForm extends Component {
   state= { cabins: '', start_date: '', end_date: '', 
    kids: '', adults: ''}
@@ -11,16 +11,16 @@ class ReservationForm extends Component {
     this.setState({ [name]: value })
   }
 
-  componentDidMount() {
-    axios.post('/api/cabins')
-    .then( res => {
-      const { cabins } = this.state
-        this.setState({ cabins: [...cabins, res.data ]})
-    })
-    .catch( err => {
-      console.log(err)
-    })
-  }
+  // componentDidMount() {
+  //   axios.post('/api/cabins')
+  //   .then( res => {
+  //     const { cabins } = this.state
+  //       this.setState({ cabins: [...cabins, res.data ]})
+  //   })
+  //   .catch( err => {
+  //     console.log(err)
+  //   })
+  // }
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -29,6 +29,12 @@ class ReservationForm extends Component {
     //clear form
     this.setState({ cabins: '', start_date: '', end_date: ''
     , kids: '', adults: ''})
+  }
+
+renderReservation = () => {
+    //show page for reservation
+    const { cabins } = this.state
+    return cabins.map (cabin => <Reservation key={cabin.id} {...cabin} remove={this.deleteReservation} />)
   }
 
   render() {
