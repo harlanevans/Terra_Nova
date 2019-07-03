@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Divider } from 'semantic-ui-react';
 import axios from 'axios';
-
+import Reservation from './Reservation';
 class ReservationForm extends Component {
   state= { cabins: '', start_date: '', end_date: '', 
    kids: '', adults: ''}
