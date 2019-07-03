@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Reservation from './Reservation';
 import ReservationForm from './ReservationForm';
+import Calendar from 'react-calendar';
 
 class ReservationShow extends Component {
   state = { cabins: [] }
@@ -12,19 +13,6 @@ class ReservationShow extends Component {
       this.setState({ cabins: res.data })
     })
     .catch(err => {
-      console.log(err)
-    })
-  }
-
-  addReservation = (cabin) => {
-    //axios post to backend
-    axios.post('/api/cabins', { cabin })
-    //add cabin to frontend promise handling
-    .then( res => {
-      const { cabins } = this.state
-      this.setState({ cabins: [...cabins, res.data ]})
-    })
-    .catch( err => {
       console.log(err)
     })
   }
@@ -55,18 +43,15 @@ class ReservationShow extends Component {
     })
   }
 
-  renderReservation = () => {
-    //show page for reservation
-    const { cabins } = this.state
-    return cabins.map (cabin => <Reservation key={cabin.id} {...cabin} remove={this.deleteReservation} />)
-  }
+
+
+
 
   render() {
     return (
       <> 
-      <h1>Your Reservation</h1>
-      <ReservationForm add={this.addReservation} />
-      {this.renderReservation()}
+      <ReservationForm />
+      <Calendar />
       </>
     )
   }
