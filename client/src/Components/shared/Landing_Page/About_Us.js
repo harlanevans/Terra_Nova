@@ -5,6 +5,7 @@ import { Grid, Image, Segment, Placeholder, Container, Header } from 'semantic-u
 const About_Us = () => {
 
   return (
+    <>
     <div className="section" style={{ textAlign: 'center', backgroundColor: "#73A288" }}>
       <Container>
         <Grid columns={2} relaxed='very'>
@@ -70,6 +71,7 @@ const About_Us = () => {
         </Grid>
       </Container>
     </div>
+    </>
     )
 }
 
