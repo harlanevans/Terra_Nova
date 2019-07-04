@@ -1,9 +1,11 @@
 import React from 'react';
 import { Grid, Image, Segment, Placeholder, Container, Header } from 'semantic-ui-react'
 
+
 const About_Us = () => {
 
   return (
+    <>
     <div className="section" style={{ textAlign: 'center', backgroundColor: "#73A288" }}>
       <Container>
         <Grid columns={2} relaxed='very'>
@@ -69,6 +71,7 @@ const About_Us = () => {
         </Grid>
       </Container>
     </div>
+    </>
     )
 }
 
