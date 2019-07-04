@@ -53,7 +53,7 @@ class ReservationForm extends Component {
     const { add } = this.props
     add(this.state)
     //clear form
-    this.setState({ rooms: '', start_date: '', end_date: ''
+    this.setState({ rooms: '1', start_date: '', end_date: ''
     , kids: '', adults: ''})
   }
 
