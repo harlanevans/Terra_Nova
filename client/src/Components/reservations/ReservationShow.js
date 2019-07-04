@@ -2,10 +2,25 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Reservation from './Reservation';
 import ReservationForm from './ReservationForm';
-import Calendar from 'react-calendar';
+import './ReservationShowStyle.css';
 
 class ReservationShow extends Component {
   state = { cabins: [] }
+
+  //  handleClick = (id) => {
+  //   const { cabins } = this.state 
+  //   this.setState({ 
+  //     cabins: cabins.map( cabin => {
+  //       if (cabin.id === id) {
+  //         return {
+  //           ...cabin,
+  //           complete: !todo.complete
+  //         }
+  //       }
+  //       return todo
+  //     })
+  //   })
+  // }
 
   componentDidMount() {
     axios.get("/api/cabins")
@@ -49,9 +64,13 @@ class ReservationShow extends Component {
 
   render() {
     return (
-      <> 
-      <ReservationForm />
-      <Calendar />
+      <>
+      <header>
+        <h1>Reservation</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing</p>
+      </header>
+      <ReservationForm add={this.addReservation}/>
+    
       </>
     )
   }
