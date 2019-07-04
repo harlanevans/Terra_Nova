@@ -7,6 +7,21 @@ import Calendar from 'react-calendar';
 class ReservationShow extends Component {
   state = { cabins: [] }
 
+  //  handleClick = (id) => {
+  //   const { cabins } = this.state 
+  //   this.setState({ 
+  //     cabins: cabins.map( cabin => {
+  //       if (cabin.id === id) {
+  //         return {
+  //           ...cabin,
+  //           complete: !todo.complete
+  //         }
+  //       }
+  //       return todo
+  //     })
+  //   })
+  // }
+
   componentDidMount() {
     axios.get("/api/cabins")
     .then( res => {
