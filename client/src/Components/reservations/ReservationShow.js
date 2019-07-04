@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Reservation from './Reservation';
 import ReservationForm from './ReservationForm';
-import Calendar from 'react-calendar';
 import './ReservationShowStyle.css';
 
 class ReservationShow extends Component {
@@ -70,8 +69,8 @@ class ReservationShow extends Component {
         <h1>Reservation</h1>
         <p>Lorem Ipsum is simply dummy text of the printing</p>
       </header>
-      <ReservationForm />
-      <Calendar />
+      <ReservationForm add={this.addReservation}/>
+    
       </>
     )
   }
