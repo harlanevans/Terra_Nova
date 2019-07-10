@@ -8,6 +8,9 @@ import Register from './components/auth/Register';
 import FetchUser from './components/auth/FetchUser';
 import ProtectRoute from './components/auth/ProtectedRoute';
 import ReservationShow from './components/reservations/ReservationShow';
+import AboutUs from './components/shared/Landing_Page/About_Us';
+import Gallery from './components/shared/Landing_Page/Gallery';
+import Under_Construction from './components/shared/Landing_Page/Under_Construction';
 
 
 const App = () => (
@@ -20,6 +23,10 @@ const App = () => (
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
           <Route exact path='/reservation' component={ReservationShow} />
+{/* routes for sttis psages with footer */}
+          <Route exact path='/Under_Construction' component={Under_Construction} />
+          <Route exact path='/About_Us' component={AboutUs} />
+          <Route exact path='/Gallery' component={Gallery} />
           <Route component={NoMatch} />
         </Switch>
       {/* </Container> */}

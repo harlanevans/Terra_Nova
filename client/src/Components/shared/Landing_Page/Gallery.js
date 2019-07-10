@@ -1,13 +1,11 @@
 import React from 'react';
 import { Container, Header, Icon, Grid, Divider } from 'semantic-ui-react'
-import "./Gallery.css";
+import "../../../styles/Gallery.css";
 
 
 
 
-const Gallery = () => {
-
-  return (
+const Gallery = () => (
     <div style={{ textAlign: 'center', backgroundColor: "#73A299" }}>
       <Container>
         <Grid>
@@ -230,7 +228,7 @@ const Gallery = () => {
 
 
     </div>
-  )
-}
+)
+
 
 export default Gallery;
