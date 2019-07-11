@@ -202,3 +202,17 @@ code {
 .topnav a:link {
   color: black;
 }
+
+.roomh1 {
+  text-align:center;
+  text-transform: uppercase;
+}
+
+.cabin {
+  padding: .5em;
+}
+
+.res {
+  text-align: center;
+  text-transform: uppercase;
+}
