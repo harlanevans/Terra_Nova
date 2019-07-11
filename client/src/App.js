@@ -27,7 +27,7 @@ const App = () => (
           <Route exact path='/register' component={Register} />
           <Route exact path='/reservation' component={ReservationShow} />
           <Route exact path='/rooms' component={Rooms} />
-          <Route exact path='/makereservation' component={MakeReservation} />
+          <Route exact path='/makereservation/:id' component={MakeReservation} />
           <Route exact path='/confirmation' component={Confirmation} />
 {/* routes for sttis psages with footer */}
           <Route exact path='/Under_Construction' component={Under_Construction} />
