@@ -1,4 +1,3 @@
-require ('shufflejs');
 
 var Shuffle = window.Shuffle;
 class Demo {
