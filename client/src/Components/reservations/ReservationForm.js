@@ -3,6 +3,10 @@ import { Form, Divider } from 'semantic-ui-react';
 import axios from 'axios';
 import {Grid} from 'semantic-ui-react';
 import Calendar from 'react-calendar';
+import DayPick, { DateUtils } from 'react-day-picker';
+import 'react-day-picker/lib/style.css';
+import DayPickerInput from 'react-day-picker/DayPickerInput';
+import { formatDate, parseDate } from 'react-day-picker/moment';
 
 class ReservationForm extends Component {
   state= { rooms: '1', start_date: new Date(), end_date: new Date(), 
@@ -11,6 +15,26 @@ class ReservationForm extends Component {
   handleChange = (e) => {
     const { name, value } = e.target
     this.setState({ [name]: value })
+  }
+
+  constructor(props) {
+    super(props);
+    this.handleDayClick = this.handleDayClick.bind(this);
+    this.handleResetClick = this.handleResetClick.bind(this);
+    this.state = this.getInitialState();
+  }
+  getInitialState() {
+    return {
+      from: undefined,
+      to: undefined,
+    };
+  }
+  handleDayClick(day) {
+    const range = DateUtils.addDayToRange(day, this.state);
+    this.setState(range);
+  }
+  handleResetClick() {
+    this.setState(this.getInitialState());
   }
 
   // componentDidMount() {
@@ -24,15 +48,15 @@ class ReservationForm extends Component {
   //   })
   // }
 
-  handleCalendar = range => {
-    this.setState({
-      reservation: {
-        ...this.state.reservation,
-        start_date: range[0],
-        end_date: range[1]
-      }
-    });
-  };
+  // handleCalendar = range => {
+  //   this.setState({
+  //     reservation: {
+  //       ...this.state.reservation,
+  //       start_date: range[0],
+  //       end_date: range[1]
+  //     }
+  //   });
+  // };
 
   addReservation = (cabin) => {
     //axios post to backend
@@ -50,7 +74,7 @@ class ReservationForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { add } = this.props
-    add(this.state)
+    // add(this.state)
     //clear form
     this.setState({ rooms: '1', start_date: '', end_date: ''
     , kids: '', adults: ''})
@@ -68,6 +92,8 @@ class ReservationForm extends Component {
 
   render() {
     const {rooms, start_date, end_date, kids, adults } = this.state
+    const { from, to } = this.state;
+    const modifiers = { start: from, end: to };
     return (
       <>
       <Grid columns={3}>
@@ -83,15 +109,32 @@ class ReservationForm extends Component {
         <label>Your Stay Dates</label>
         </div>
         <Form.Field>
-          <div class="label-div">
-          <label>Arrive</label><br />
+        <div className="InputFromTo">
+        <DayPickerInput
+          value={from}
+          placeholder="From"
+          format="LL"
+          formatDate={formatDate}
+          parseDate={parseDate}
+          dayPickerProps={{
+            selectedDays: [from, { from, to }],
+            disabledDays: { after: to },
+            toMonth: to,
+            modifiers,
+            numberOfMonths: 2,
+            onDayClick: () => this.to.getInput().focus(),
+          }}
+          onDayChange={this.handleFromChange}
+        />
+          {/* <div class="label-div">
+
           <input 
             placeholder="todays date" 
             type="date" 
             name="start_date"
             value={start_date}
             onChange={this.handleChange}
-            />
+            /> */}
           </div>
         </Form.Field>
         {/* <Form.Field>
@@ -111,16 +154,39 @@ class ReservationForm extends Component {
           </select>
           </div>
         </Form.Field> */}
-        <Form.Field>
-        <div class="label-div">
+        <div class="gold-label">
           <label>Departure</label><br />
-          <input 
+          </div>
+        <Form.Field>
+        <span className="InputFromTo-to">
+          <DayPickerInput
+            ref={el => (this.to = el)}
+            value={to}
+            placeholder="To"
+            format="LL"
+            formatDate={formatDate}
+            parseDate={parseDate}
+            dayPickerProps={{
+              selectedDays: [from, { from, to }],
+              disabledDays: { before: from },
+              modifiers,
+              month: from,
+              fromMonth: from,
+              numberOfMonths: 2,
+            }}
+            onDayChange={this.handleToChange}
+          />
+        </span>
+        <button className="link" onClick={this.handleResetClick}>
+                Reset
+              </button>
+
+          {/* <input 
             placeholder="leave date" 
             type="date"
             name="end_date"
             value={end_date}
-            onChange={this.handleChange}/>
-          </div>
+            onChange={this.handleChange}/> */}
         </Form.Field>
         <div class="gold-label">
         <label>Rooms and Guest</label>
@@ -207,17 +273,29 @@ class ReservationForm extends Component {
         </Form.Field>
       </Form>
       </Grid.Column>
-      <Grid.Column width={4}>
-       <Calendar 
+      {/* <Grid.Column width={4}> */}
+      
+        <DayPick 
+         className="Selectable"
+         numberOfMonths={this.props.numberOfMonths}
+         selectedDays={[from, { from, to }]}
+         modifiers={modifiers}
+         numberOfMonths={2}
+         onDayClick={this.handleDayClick}
+        />
+       
+
+       {/* <Calendar 
+         numberOfMonths={2}
          onChange={this.handleCalendar}
          value={[start_date, end_date]}
          selectRange
-         minDate={new Date()}
-       />
-      </Grid.Column>
-      <Grid.Column width={4}>
-       <Calendar />
-      </Grid.Column>
+        minDate={new Date()} */}
+       {/* /> */}
+      {/* </Grid.Column> */}
+      {/* <Grid.Column width={4}> */}
+       {/* <Calendar /> */}
+      {/* </Grid.Column> */}
       </Grid.Row>
       </Grid>
       </>
@@ -236,3 +314,4 @@ const styles = {
 
   }
 }
+
