@@ -1,12 +1,12 @@
-import React, { Component } from './node_modules/react';
-import axios from './node_modules/axios';
+import React, { Component } from 'react';
+import axios from 'axios';
 import ReservationForm from './ReservationForm';
 import './ReservationShowStyle.css';
-import { Switch, Route, Link, NavLink, BrowserRouter as Router } from './node_modules/react-router-dom';
+import { Switch, Route, Link, NavLink, BrowserRouter as Router } from 'react-router-dom';
 import Rooms from './Rooms';
 import MakeReservation from './MakeReservation';
 import Confirmation from './Confirmation';
-import { Button, Breadcrumb } from './node_modules/semantic-ui-react'
+import { Button, Breadcrumb } from 'semantic-ui-react'
 import BreadcrumbNav from './BreadcrumbNav';
 
 class ReservationShow extends Component {
