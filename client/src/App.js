@@ -1,19 +1,19 @@
 import React from 'react';
 import { Switch, Route, Link, NavLink, BrowserRouter as Router } from 'react-router-dom';
-import Navbar from './components/shared/Navbar';
-import NoMatch from './components/shared/NoMatch';
-import Home from './components/shared/Landing_Page/Home';
-import Login from './components/auth/Login';
-import Register from './components/auth/Register';
-import FetchUser from './components/auth/FetchUser';
-import ProtectRoute from './components/auth/ProtectedRoute';
-import ReservationShow from './components/reservations/ReservationShow';
-import Rooms from './components/reservations/Rooms';
-import MakeReservation from './components/reservations/MakeReservation';
-import Confirmation from './components/reservations/Confirmation';
-import AboutUs from './components/shared/Landing_Page/About_Us';
-import Gallery from './components/shared/Landing_Page/Gallery';
-import Under_Construction from './components/shared/Landing_Page/Under_Construction';
+import Navbar from './Components/shared/Navbar';
+import NoMatch from './Components/shared/NoMatch';
+import Home from './Components/shared/Landing_Page/Home';
+import Login from './Components/auth/Login';
+import Register from './Components/auth/Register';
+import FetchUser from './Components/auth/FetchUser';
+import ProtectRoute from './Components/auth/ProtectedRoute';
+import ReservationShow from './Components/reservations/ReservationShow';
+import Rooms from './Components/reservations/Rooms';
+import MakeReservation from './Components/reservations/MakeReservation';
+import Confirmation from './Components/reservations/Confirmation';
+import AboutUs from './Components/shared/Landing_Page/About_Us';
+import Gallery from './Components/shared/Landing_Page/Gallery';
+import Under_Construction from './Components/shared/Landing_Page/Under_Construction';
 
 
 const App = () => (
