@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from './node_modules/react';
 import BreadcrumbNav from './BreadcrumbNav';
-import axios from 'axios';
+import axios from './node_modules/axios';
 
 
 class MakeReservation extends Component {

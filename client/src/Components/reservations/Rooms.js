@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from './node_modules/react';
 import BreadcrumbNav from './BreadcrumbNav';
-import Axios from 'axios';
+import Axios from './node_modules/axios';
 import CabinList from './CabinList';
 import Cabin from './Cabin';
-import axios from 'axios';
-import { Container } from 'semantic-ui-react';
+import axios from './node_modules/axios';
+import { Container } from './node_modules/semantic-ui-react';
 
 class Rooms extends Component {
   state = { cabins: [] }

@@ -1,5 +1,5 @@
-import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+import React from './node_modules/react';
+import Carousel from './node_modules/react-bootstrap/Carousel';
 
 
 class Main_Carousel extends React.Component {

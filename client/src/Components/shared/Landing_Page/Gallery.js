@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container, Header, Icon, Grid, Divider } from 'semantic-ui-react'
+import React from './node_modules/react';
+import { Container, Header, Icon, Grid, Divider } from './node_modules/semantic-ui-react'
 import "../../../styles/Gallery.css";
 
 
