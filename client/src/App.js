@@ -11,6 +11,9 @@ import ReservationShow from './components/reservations/ReservationShow';
 import Rooms from './components/reservations/Rooms';
 import MakeReservation from './components/reservations/MakeReservation';
 import Confirmation from './components/reservations/Confirmation';
+import AboutUs from './components/shared/Landing_Page/About_Us';
+import Gallery from './components/shared/Landing_Page/Gallery';
+import Under_Construction from './components/shared/Landing_Page/Under_Construction';
 
 
 const App = () => (
@@ -26,6 +29,11 @@ const App = () => (
           <Route exact path='/rooms' component={Rooms} />
           <Route exact path='/makereservation' component={MakeReservation} />
           <Route exact path='/confirmation' component={Confirmation} />
+{/* routes for sttis psages with footer */}
+          <Route exact path='/Under_Construction' component={Under_Construction} />
+          <Route exact path='/About_Us' component={AboutUs} />
+          <Route exact path='/Gallery' component={Gallery} />
+          <Route component={NoMatch} />
         </Switch>
       {/* </Container> */}
     </FetchUser>
