@@ -1,4 +1,4 @@
-import React from './node_modules/react';
+import React from 'react';
 import Controlled_Carousel from './Main_Carousel';
 import Rooms_Home from './Rooms_Home';
 import About_Us from './About_Us';

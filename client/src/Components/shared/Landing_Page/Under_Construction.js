@@ -1,6 +1,6 @@
-import React from './node_modules/react';
-import Card from './node_modules/react-bootstrap/Card';
-import Container from './node_modules/react-bootstrap/Container';
+import React from 'react';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
 
 
 const Under_Construction = () => {

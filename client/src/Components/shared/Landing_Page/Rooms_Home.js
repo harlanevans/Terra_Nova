@@ -1,5 +1,5 @@
-import React from './node_modules/react';
-import { Container, Card, Placeholder, Header} from './node_modules/semantic-ui-react'
+import React from 'react';
+import { Container, Card, Placeholder, Header} from 'semantic-ui-react'
 
 
 class Rooms_Home extends React.Component {

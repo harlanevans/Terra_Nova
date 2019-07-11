@@ -1,7 +1,7 @@
-import React from './node_modules/react';
+import React from 'react';
 import Cabin from './Cabin';
-import { Grid, Image } from './node_modules/semantic-ui-react'
-import { Link } from './node_modules/react-router-dom';
+import { Grid, Image } from 'semantic-ui-react'
+import { Link } from 'react-router-dom';
 
 const CabinList = ({ cabins }) => (
   <div>

@@ -1,12 +1,12 @@
-import React, { Component } from './node_modules/react';
-import { Form, Divider } from './node_modules/semantic-ui-react';
-import axios from './node_modules/axios';
-import {Grid} from './node_modules/semantic-ui-react';
+import React, { Component } from 'react';
+import { Form, Divider } from 'semantic-ui-react';
+import axios from 'axios';
+import {Grid} from 'semantic-ui-react';
 import Calendar from 'react-calendar';
-import DayPick, { DateUtils } from './node_modules/react-day-picker';
-import './node_modules/react-day-picker/lib/style.css';
-import DayPickerInput from './node_modules/react-day-picker/DayPickerInput';
-import { formatDate, parseDate } from './node_modules/react-day-picker/moment';
+import DayPick, { DateUtils } from 'react-day-picker';
+import 'react-day-picker/lib/style.css';
+import DayPickerInput from 'react-day-picker/DayPickerInput';
+import { formatDate, parseDate } from 'react-day-picker/moment';
 
 class ReservationForm extends Component {
   state= { rooms: '1', start_date: new Date(), end_date: new Date(), 

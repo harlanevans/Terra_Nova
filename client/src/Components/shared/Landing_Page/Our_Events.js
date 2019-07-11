@@ -1,6 +1,6 @@
-import React from './node_modules/react';
-import { Grid, Image, Container } from './node_modules/semantic-ui-react'
-import Card from './node_modules/react-bootstrap/Card';
+import React from 'react';
+import { Grid, Image, Container } from 'semantic-ui-react'
+import Card from 'react-bootstrap/Card';
 
 
 const GridExampleRelaxed = () => (

@@ -1,5 +1,5 @@
-import React from './node_modules/react';
-import { Grid, Image } from './node_modules/semantic-ui-react'
+import React from 'react';
+import { Grid, Image } from 'semantic-ui-react'
 
 const Cabin = ({ beds, baths, max_occupancy }) => (
   <>

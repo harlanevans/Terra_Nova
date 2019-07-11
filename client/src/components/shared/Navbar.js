@@ -1,9 +1,9 @@
-import React, { Component } from './node_modules/react';
-import { Menu, Image, Container } from './node_modules/semantic-ui-react';
-import { Link } from './node_modules/react-router-dom';
-import { withRouter } from './node_modules/react-router-dom';
+import React, { Component } from 'react';
+import { Menu, Image, Container } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { AuthConsumer } from '../../providers/AuthProvider';
-import { HashLink } from './node_modules/react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 
 
 class Navbar extends Component {
