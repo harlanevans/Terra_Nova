@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Reservation from './Reservation';
 import ReservationForm from './ReservationForm';
 import './ReservationShowStyle.css';
+import { Switch, Route, Link, NavLink, BrowserRouter as Router } from 'react-router-dom';
+import Rooms from './Rooms';
+import MakeReservation from './MakeReservation';
+import Confirmation from './Confirmation';
+import { Button, Breadcrumb } from 'semantic-ui-react'
+import BreadcrumbNav from './BreadcrumbNav';
 
 class ReservationShow extends Component {
   state = { cabins: [] }
@@ -21,6 +26,22 @@ class ReservationShow extends Component {
   //     })
   //   })
   // }
+
+  constructor(){
+    super()
+    this.state = {
+      nav: [["/reservation", "Choose Date"]]
+  }
+}
+
+addToNavBar = (path, displayName) => {
+  this.setState({nav: [...this.state.nav, [path, displayName]]}, () => console.log(this.state.nav))
+}
+
+rollBackNavBar = (destination) => {
+  console.log("roll back to", destination)
+  this.setState({nav: this.state.nav.slice(0, destination + 1)})
+}
 
   componentDidMount() {
     axios.get("/api/cabins")
@@ -69,7 +90,8 @@ class ReservationShow extends Component {
         <h1>Reservation</h1>
         <p>Lorem Ipsum is simply dummy text of the printing</p>
       </header>
-      <ReservationForm add={this.addReservation}/>
+      <BreadcrumbNav />
+      <ReservationForm />
     
       </>
     )

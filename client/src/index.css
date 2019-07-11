@@ -165,3 +165,40 @@ code {
 .react-calendar__tile--hasActive {
   background: #9c973685 !important;
 }
+
+.topnav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+.topnav a {
+  float: left;
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 11px;
+  border-bottom: 3px solid transparent;
+}
+
+.topnav a:hover {
+  border-bottom: 3px solid #9c9736b8;
+}
+
+.topnav a.active {
+  border-bottom: 3px solid #9c9736b8;
+}
+
+.topnav a:visited {
+  color: #9c9736b8;
+}
+
+.topnav a:link {
+  color: black;
+}
