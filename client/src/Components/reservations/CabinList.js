@@ -6,21 +6,25 @@ import { Link } from 'react-router-dom';
 const CabinList = ({ cabins }) => (
   <div>
     
-         <Grid>
-         <Grid.Row>
-           {
-         cabins.map( cabin =>
-        <Link to={`/makereservation/${cabin.id}`}>
-        <Cabin
-        key={cabin.id}
-        {...cabin}
-        />
-        </Link>
-        )
-         }
-           </Grid.Row>
-       </Grid>
-    
+    <Grid>
+      <Grid.Row>
+      {
+          cabins.map( cabin =>
+            
+          <Link 
+              to={{
+              pathname: `/makereservation/${cabin.id}`,
+              state: { cabin, },
+            }}>
+            <Cabin
+            key={cabin.id}
+            {...cabin}
+            />
+          </Link>
+          )
+        }
+      </Grid.Row>
+    </Grid>
     
   </div>
 )

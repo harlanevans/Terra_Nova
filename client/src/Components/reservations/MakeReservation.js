@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BreadcrumbNav from './BreadcrumbNav';
 import axios from 'axios';
+import { Image } from 'semantic-ui-react';
 
 
 class MakeReservation extends Component {
@@ -17,16 +18,24 @@ class MakeReservation extends Component {
   // }
   
   render() {
-    const { cabin } = this.state
+    const { beds, baths, max_occupancy } = this.props.location.state.cabin
+
     return (
       <>
       <header>
           <h1>Reservation</h1>
           <p>Lorem Ipsum is simply dummy text of the printing</p>
         </header>
+        {/* <Image src={img} /> */}
         <BreadcrumbNav />
        <div class="res">
          <h1>Make Reservation!</h1>
+         <center>
+          <Image src='https://images.unsplash.com/photo-1506974210756-8e1b8985d348?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80' size="medium"/>
+         </center>
+         <h2>Rooms: {beds}</h2>
+         <h2>Baths: {baths}</h2>
+         <h2>Max Occupancy: {max_occupancy}</h2>
       </div>
     </>
     )
