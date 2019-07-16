@@ -40,6 +40,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'simplecov'
   gem 'factory_bot_rails'
+  gem 'braintree'
+  gem 'dotenv-rails'
 
 end
 

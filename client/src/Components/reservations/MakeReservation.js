@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import BreadcrumbNav from './BreadcrumbNav';
 import axios from 'axios';
-import { Image } from 'semantic-ui-react';
+import { Image, Segment, Header, Label, Input, Divider, Icon } from 'semantic-ui-react';
+import BraintreeDrop from '../braintree/BraintreeDrop';
 
 
 class MakeReservation extends Component {
-  state = { cabin: [] }
+  state = { cabin: [], amount: 10 }
 
   // componentDidMount() {
   //   axios.get(`/api/cabins/${cabin.id}`)
@@ -19,6 +20,7 @@ class MakeReservation extends Component {
   
   render() {
     const { beds, baths, max_occupancy } = this.props.location.state.cabin
+    const { amount } = this.state
 
     return (
       <>
@@ -37,6 +39,15 @@ class MakeReservation extends Component {
          <h2>Baths: {baths}</h2>
          <h2>Max Occupancy: {max_occupancy}</h2>
       </div>
+
+      <Segment basic textAlign='center'>
+        <Divider horizontal>SUBMIT PAYMENT TO CONTINUE</Divider>
+        <Icon name='payment' size='huge'  />
+        <br />
+        <Label color='black'>Payment Amount</Label>
+        <Input value={amount} disabled style={{ fontSize: '18px' }} />
+        <BraintreeDrop amount={amount} />
+      </Segment>
     </>
     )
   }

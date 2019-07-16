@@ -30,3 +30,6 @@
 
 #for rspec
 /coverage
+
+#ignore braintree keys
+.env
