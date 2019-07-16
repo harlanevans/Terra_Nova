@@ -25,22 +25,34 @@ const About_Us = () => {
           <Grid.Row>
             <Grid.Column>
               <Segment>
-                <Image src='https://via.placeholder.com/50' />
+                <div className="ui fluid image">
+                  <Image src = '../../../images/about_us/icons8-bed-100.png' size='small'/>
+                  <div style={{position: 'absolute', bottom: -10, width: '100%', height: 'auto'}}>MASTER BEDROOMS</div>
+                </div>
               </Segment>
             </Grid.Column>
             <Grid.Column>
               <Segment>
-                <Image src='https://via.placeholder.com/50' />
+                <div className="ui fluid image">
+                  <Image src = '../../../images/about_us/icons8-lake-100.png' size='small'/>
+                  <div style={{position: 'absolute', bottom: -10, width: '100%', height: 'auto'}}>LAKE VIEW</div>
+                </div>
               </Segment>
             </Grid.Column>
             <Grid.Column>
               <Segment>
-                <Image src='https://via.placeholder.com/50' />
+                <div className="ui fluid image">
+                  <Image src = '../../../images/about_us/icons8-lap-pool-100.png' size='small'/>
+                  <div style={{position: 'absolute', bottom: -10, width: '100%', height: 'auto'}}>POOL & SPA</div>
+                </div>
               </Segment>
             </Grid.Column>
             <Grid.Column>
               <Segment>
-                <Image src='https://via.placeholder.com/50' />
+                <div className="ui fluid image">
+                  <Image src = '../../../images/about_us/icons8-internet-antenna-96.png' size='small'/>
+                  <div style={{position: 'absolute', bottom: -10, width: '100%', height: 'auto'}}>WIFI COVERAGE</div>
+                </div>
               </Segment>
             </Grid.Column>
           </Grid.Row>
@@ -49,22 +61,34 @@ const About_Us = () => {
           <Grid.Row>
             <Grid.Column>
               <Segment>
-                <Image src='https://via.placeholder.com/50' />
+                <div className="ui fluid image">
+                  <Image src = '../../../images/about_us/icons8-package-100.png' size='small'/>
+                  <div style={{position: 'absolute', bottom: -10, width: '100%', height: 'auto'}}>AWESOME PACKAGES</div>
+                </div>
               </Segment>
             </Grid.Column>
             <Grid.Column>
               <Segment>
-                <Image src='https://via.placeholder.com/50' />
+                <div className="ui fluid image">
+                  <Image src = '../../../images/about_us/icons8-vacuum-cleaner-160.png' size='small'/>
+                  <div style={{position: 'absolute', bottom: -10, width: '100%', height: 'auto'}}>CLEANING EVERYDAY</div>
+                </div>
               </Segment>
             </Grid.Column>
             <Grid.Column>
               <Segment>
-                <Image src='https://via.placeholder.com/50' />
+                <div className="ui fluid image">
+                  <Image src = '../../../images/about_us/icons8-meal-100.png' size='small'/>
+                  <div style={{position: 'absolute', bottom: -10, width: '100%', height: 'auto'}}>BUFFET BREAKFAST</div>
+                </div>
               </Segment>
             </Grid.Column>
             <Grid.Column>
               <Segment>
-                <Image src='https://via.placeholder.com/50' />
+                <div className="ui fluid image">
+                  <Image src = '../../../images/about_us/icons8-taxi-100.png' size='small'/>
+                  <div style={{position: 'absolute', bottom: -10, width: '100%', height: 'auto'}}>AIRPORT TAXI</div>
+                </div>
               </Segment>
             </Grid.Column>
           </Grid.Row>
