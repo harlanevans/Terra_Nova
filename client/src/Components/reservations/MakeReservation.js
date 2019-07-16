@@ -20,6 +20,7 @@ class MakeReservation extends Component {
   
   render() {
     const { beds, baths, max_occupancy } = this.props.location.state.cabin
+
     const { amount } = this.state
 
     return (
@@ -38,6 +39,7 @@ class MakeReservation extends Component {
          <h2>Rooms: {beds}</h2>
          <h2>Baths: {baths}</h2>
          <h2>Max Occupancy: {max_occupancy}</h2>
+         {/* <h2>From: {start_date} to: {end_date}</h2> */}
       </div>
 
       <Segment basic textAlign='center'>
