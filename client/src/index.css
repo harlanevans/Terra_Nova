@@ -232,3 +232,16 @@ code {
   text-align: center;
   text-transform: uppercase;
 }
+
+.bg-white {
+  background: #fff;
+}
+
+.event-words {
+  text-align: center;
+  margin-top: 300px;
+}
+
+.our-events-hr {
+  color: #9c9736b8
+}
