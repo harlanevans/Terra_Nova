@@ -3,6 +3,10 @@ class Api::BraintreeController < ApplicationController
     render json: ENV['BRAINTREE_DROPIN_TOKEN']
   end
 
+  def role_symbols
+    [role.to_sym]
+  end
+
   def payment
     result = Braintree::Transaction.sale(
       :amount => params[:amount],
