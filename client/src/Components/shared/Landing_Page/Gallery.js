@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Header, Icon, Grid, Divider } from 'semantic-ui-react'
+import { Container, Header, Icon, Grid, Divider, Image, Segment } from 'semantic-ui-react'
 import "../../../styles/Gallery.css";
 
 
@@ -19,7 +19,7 @@ const Gallery = () => (
             </Grid.Column>
             <Grid.Column width={6} style={{ textAlign: 'center'}}></Grid.Column>
           </Grid.Row>
-          <Grid.Row>
+          {/* <Grid.Row>
             <div className='gallery_nav'>
               <ul>
                 <li>HOTEL & GROUND</li>
@@ -28,7 +28,7 @@ const Gallery = () => (
                 <li>DINING</li>
               </ul>
             </div>
-          </Grid.Row>
+          </Grid.Row> */}
         </Grid>
       </Container>
 
@@ -37,24 +37,28 @@ const Gallery = () => (
         <div className="container">
           <div className="row">
             <div className="col-4@sm col-3@md">
-              <div className="filters-group">
+              {/* <div className="filters-group">
                 <label htmlFor="filters-search-input" className="filter-label">Search</label>
                 <input className="textfield filter__search js-shuffle-search" type="search" id="filters-search-input" />
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="row">
             <div className="col-12@sm filters-group-wrap">
               <div className="filters-group">
-                <p className="filter-label">Filter</p>
+                {/* <p className="filter-label">Filter</p> */}
                 <div className="btn-group filter-options">
-                  <button className="btn btn--primary" data-group="space">Space</button>
+                  <button className="btn btn--primary gallery_nav" data-group="hotel">HOTEL & GROUND</button>
+                  <button className="btn btn--primary gallery_nav" data-group="roomsuite">ROOMSUITE</button>
+                  <button className="btn btn--primary gallery_nav" data-group="bathroom">BATHROOM</button>
+                  <button className="btn btn--primary gallery_nav" data-group="dining">DINING</button>
+                  {/* <button className="btn btn--primary" data-group="space">Space</button>
                   <button className="btn btn--primary" data-group="nature">Nature</button>
                   <button className="btn btn--primary" data-group="animal">Animal</button>
-                  <button className="btn btn--primary" data-group="city">City</button>
+                  <button className="btn btn--primary" data-group="city">City</button> */}
                 </div>
               </div>
-              <fieldset className="filters-group">
+              {/* <fieldset className="filters-group">
                 <legend className="filter-label">Sort</legend>
                 <div className="btn-group sort-options">
                   <label className="btn active">
@@ -67,13 +71,118 @@ const Gallery = () => (
                     <input type="radio" name="sort-value" defaultValue="date-created" /> Date Created
                   </label>
                 </div>
-              </fieldset>
+              </fieldset> */}
             </div>
           </div>
         </div>
         <div className="container">
+
           <div id="grid" className="row my-shuffle-container">
-            <figure className="col-3@xs col-4@sm col-3@md picture-item" data-groups="[&quot;nature&quot;]" data-date-created="2017-04-30" data-title="Lake Walchen">
+            <figure className="col-3@xs col-4@sm col-1@md picture-item" data-groups="[&quot;dining&quot;]" data-title="Dining">
+              <div className="picture-item__inner">
+                <div className="aspect aspect--new">
+                  <div className="aspect__inner">
+                    <Image src = '../../../images/gallery/icons8-beef-80.png' size='small'/>
+                  </div>
+                </div>
+                {/* <div className="picture-item__details">
+                  <figcaption className="picture-item__title"><a href="https://unsplash.com/photos/zshyCr6HGw0" target="_blank" rel="noopener">Lake Walchen</a></figcaption>
+                  <p className="picture-item__tags hidden@xs">nature</p>
+                </div> */}
+              </div>
+            </figure>
+            <figure className="col-3@xs col-4@sm col-1@md picture-item" data-groups="[&quot;bathroom&quot;]" data-title="Bathroom">
+              <div className="picture-item__inner">
+                <div className="aspect aspect--new">
+                  <div className="aspect__inner">
+                    <Image src = '../../../images/gallery/icons8-bath-96.png' size='small'/>
+                  </div>
+                </div>
+                {/* <div className="picture-item__details">
+                  <figcaption className="picture-item__title"><a href="https://unsplash.com/photos/zshyCr6HGw0" target="_blank" rel="noopener">Lake Walchen</a></figcaption>
+                  <p className="picture-item__tags hidden@xs">nature</p>
+                </div> */}
+              </div>
+            </figure>
+            <figure className="col-3@xs col-4@sm col-1@md picture-item" data-groups="[&quot;roomsuite&quot;]" data-title="Room Suite">
+              <div className="picture-item__inner">
+                <div className="aspect aspect--new">
+                  <div className="aspect__inner">
+                    <Image src = '../../../images/gallery/icons8-room-100.png' size='small'/>
+                  </div>
+                </div>
+                {/* <div className="picture-item__details">
+                  <figcaption className="picture-item__title"><a href="https://unsplash.com/photos/zshyCr6HGw0" target="_blank" rel="noopener">Lake Walchen</a></figcaption>
+                  <p className="picture-item__tags hidden@xs">nature</p>
+                </div> */}
+              </div>
+            </figure>
+            <figure className="col-3@xs col-4@sm col-1@md picture-item" data-groups="[&quot;hotel&quot;]" data-title="Cabin">
+              <div className="picture-item__inner">
+                <div className="aspect aspect--new">
+                  <div className="aspect__inner">
+                    <Image src = '../../../images/gallery/icons8-log-cabin-96.png' size='small'/>
+                  </div>
+                </div>
+                {/* <div className="picture-item__details">
+                  <figcaption className="picture-item__title"><a href="https://unsplash.com/photos/zshyCr6HGw0" target="_blank" rel="noopener">Lake Walchen</a></figcaption>
+                  <p className="picture-item__tags hidden@xs">nature</p>
+                </div> */}
+              </div>
+            </figure>
+            <figure className="col-3@xs col-4@sm col-1@md picture-item" data-groups="[&quot;bathroom&quot;]" data-title="Bathroom">
+              <div className="picture-item__inner">
+                <div className="aspect aspect--new">
+                  <div className="aspect__inner">
+                    <Image src = '../../../images/gallery/icons8-bath-100.png' size='small'/>
+                  </div>
+                </div>
+                {/* <div className="picture-item__details">
+                  <figcaption className="picture-item__title"><a href="https://unsplash.com/photos/zshyCr6HGw0" target="_blank" rel="noopener">Lake Walchen</a></figcaption>
+                  <p className="picture-item__tags hidden@xs">nature</p>
+                </div> */}
+              </div>
+            </figure>
+            <figure className="col-3@xs col-4@sm col-1@md picture-item" data-groups="[&quot;hotel&quot;]" data-title="Cabin">
+              <div className="picture-item__inner">
+                <div className="aspect aspect--new">
+                  <div className="aspect__inner">
+                    <Image src = '../../../images/gallery/icons8-log-cabin-100.png' size='small'/>
+                  </div>
+                </div>
+                {/* <div className="picture-item__details">
+                  <figcaption className="picture-item__title"><a href="https://unsplash.com/photos/zshyCr6HGw0" target="_blank" rel="noopener">Lake Walchen</a></figcaption>
+                  <p className="picture-item__tags hidden@xs">nature</p>
+                </div> */}
+              </div>
+            </figure>
+            <figure className="col-3@xs col-4@sm col-1@md picture-item" data-groups="[&quot;dining&quot;]" data-title="Dining">
+              <div className="picture-item__inner">
+                <div className="aspect aspect--new">
+                  <div className="aspect__inner">
+                    <Image src = '../../../images/gallery/icons8-dining-100.png' size='small'/>
+                  </div>
+                </div>
+                {/* <div className="picture-item__details">
+                  <figcaption className="picture-item__title"><a href="https://unsplash.com/photos/zshyCr6HGw0" target="_blank" rel="noopener">Lake Walchen</a></figcaption>
+                  <p className="picture-item__tags hidden@xs">nature</p>
+                </div> */}
+              </div>
+            </figure>
+            <figure className="col-3@xs col-4@sm col-1@md picture-item" data-groups="[&quot;roomsuite&quot;]" data-title="Room Suite">
+              <div className="picture-item__inner">
+                <div className="aspect aspect--new">
+                  <div className="aspect__inner">
+                    <Image src = '../../../images/gallery/icons8-room-52.png' size='small'/>
+                  </div>
+                </div>
+                {/* <div className="picture-item__details">
+                  <figcaption className="picture-item__title"><a href="https://unsplash.com/photos/zshyCr6HGw0" target="_blank" rel="noopener">Lake Walchen</a></figcaption>
+                  <p className="picture-item__tags hidden@xs">nature</p>
+                </div> */}
+              </div>
+            </figure>
+            {/* <figure className="col-3@xs col-4@sm col-3@md picture-item" data-groups="[&quot;nature&quot;]" data-date-created="2017-04-30" data-title="Lake Walchen">
               <div className="picture-item__inner">
                 <div className="aspect aspect--16x9">
                   <div className="aspect__inner">
@@ -85,8 +194,11 @@ const Gallery = () => (
                   <p className="picture-item__tags hidden@xs">nature</p>
                 </div>
               </div>
-            </figure>
-            <figure className="col-3@xs col-8@sm col-6@md picture-item picture-item--overlay" data-groups="[&quot;city&quot;]" data-date-created="2016-07-01" data-title="Golden Gate Bridge">
+            </figure> */}
+
+
+
+            {/* <figure className="col-3@xs col-8@sm col-6@md picture-item picture-item--overlay" data-groups="[&quot;city&quot;]" data-date-created="2016-07-01" data-title="Golden Gate Bridge">
               <div className="picture-item__inner">
                 <img src="https://images.unsplash.com/photo-1467348733814-f93fc480bec6?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=2590c736835ec6555e952e19bb37f06e" srcSet="https://images.unsplash.com/photo-1467348733814-f93fc480bec6?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=2590c736835ec6555e952e19bb37f06e 1x, https://images.unsplash.com/photo-1467348733814-f93fc480bec6?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=2590c736835ec6555e952e19bb37f06e 2x" alt="Looking down over one of the pillars of the Golden Gate Bridge to the roadside and water below" />
                 <div className="picture-item__details">
@@ -219,7 +331,9 @@ const Gallery = () => (
                   <p className="picture-item__tags hidden@xs">nature, city</p>
                 </div>
               </div>
-            </figure>
+            </figure> */}
+
+            
             <div className="col-1@sm col-1@xs my-sizer-element" />
           </div>
         </div>

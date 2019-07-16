@@ -186,8 +186,8 @@ $item-height: 220px;
   }
 }
 
-// Filter styling
-// --------------
+
+
 .filter-label {
   display: block;
   padding: 0;
@@ -205,7 +205,7 @@ $item-height: 220px;
 @media screen and (min-width: 768px) {
   .filters-group-wrap {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
   }
 }
 
@@ -229,7 +229,8 @@ $item-height: 220px;
 }
 
 .btn-group .btn:not(:first-child) {
-  margin-left: -1px
+  /* margin-left: 100px; */
+  text-align: center;
 }
 
 .btn-group .btn:last-child {
@@ -239,18 +240,40 @@ $item-height: 220px;
 .btn-group label.btn input[type=radio] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
-  pointer-events: none
+  pointer-events: none;
+  text-align: center;
 }
+
+
+/* 
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  height: 30px;
+}
+
+.navbar_item a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white !important;
+}
+
+.navbar_item a:hover {
+  color: skyblue !important;
+} */
 
 .btn {
   display: inline-block;
   padding: .75em .8em;
   text-align: center;
   border-radius: 3px;
-  border: 1px solid #34495e;
-  color: #34495e;
+  border: 0px solid white;
+  color: white;
   font-size: 1rem;
-  background-color: rgba(52, 73, 94, 0);
+  /* background-color: rgba(52, 73, 94, 0); */
   transition: .2s ease-out;
   cursor: pointer;
   -webkit-appearance: none
@@ -259,26 +282,27 @@ $item-height: 220px;
 @media (-moz-touch-enabled:0),
 (pointer: fine) {
   .btn:hover {
-    color: #fff;
+    /* color: #fff; */
+    color: skyblue !important;
     text-decoration: none;
-    background-color: #34495e
+    /* background-color: #34495e */
   }
 }
 
 .btn:focus {
   outline-width: 0;
-  box-shadow: 0 0 0 2px rgba(52, 73, 94, .4)
+  /* box-shadow: 0 0 0 2px rgba(52, 73, 94, .4) */
 }
 
 .btn.active,
 .btn:active {
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+  /* box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3); */
   color: #fff;
-  background-color: #34495e
+  /* background-color: #34495e */
 }
 
 .btn:focus.active {
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3), 0 0 0 2px rgba(52, 73, 94, .4)
+  /* box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3), 0 0 0 2px rgba(52, 73, 94, .4) */
 }
 
 .btn:disabled {
@@ -289,29 +313,30 @@ $item-height: 220px;
 }
 
 .btn--primary {
-  color: #3498db;
+  color: white;
+  /* color: #3498db;
   border-color: #3498db;
-  background-color: rgba(52, 152, 219, 0)
+  background-color: rgba(52, 152, 219, 0) */
 }
 
 @media (-moz-touch-enabled:0),
 (pointer: fine) {
   .btn--primary:hover {
-    background-color: #3498db
+    /* background-color: #3498db */
   }
 }
 
 .btn--primary:focus {
-  box-shadow: 0 0 0 2px rgba(52, 152, 219, .4)
+  /* box-shadow: 0 0 0 2px rgba(52, 152, 219, .4) */
 }
 
 .btn--primary.active,
 .btn--primary:active {
-  background-color: #3498db
+  /* background-color: #3498db */
 }
 
 .btn--primary:focus.active {
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3), 0 0 0 2px rgba(52, 152, 219, .4)
+  /* box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3), 0 0 0 2px rgba(52, 152, 219, .4) */
 }
 
 .btn--primary:disabled {
@@ -451,17 +476,20 @@ $item-height: 220px;
 
 .aspect__inner {
   position: absolute;
-  top: 0;
+  top: 15%;
   right: 0;
   bottom: 0;
-  left: 0;
+  left: 15%;
 }
 
 .aspect--16x9 {
   padding-bottom: 56.25%;
 }
 
-// bootstrap3-like grid
+.aspect--new {
+  padding-bottom: 100%;
+}
+
 .col-1\@xs,
 .col-2\@xs,
 .col-3\@xs,
@@ -495,8 +523,8 @@ $item-height: 220px;
   position: relative;
   box-sizing: border-box;
   min-height: 1px;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .col-1\@xs,
