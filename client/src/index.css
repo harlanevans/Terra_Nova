@@ -20,16 +20,16 @@ code {
   color: white;
   font-size: 4em;
   position: relative;
-  bottom: 550x;
+  /* bottom: 550x; */
   z-index: 5;
-  padding-bottom: 600px;
+  padding-bottom: 500px;
 }
 
 .carouselTitle2 {
   color: white;
   font-size: 4em;
   position: relative;
-  bottom: 600px;
+  /* bottom: 400px; */
   z-index: 4;
 }
 
@@ -37,7 +37,7 @@ code {
   color: white;
   font-size: 2em;
   position: relative;
-  bottom: 500px;
+  bottom: 400px;
   z-index: 3;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -56,6 +56,13 @@ code {
   text-decoration: none;
   text-transform: uppercase;
   color: white !important;
+}
+
+.navbar_container {
+    background-color: #808080 !important;
+    margin: 0 auto !important;
+    padding: 0px !important;
+    width: 60% !important;
 }
 
 .navbar_item a:hover {
