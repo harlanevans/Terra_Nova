@@ -29,6 +29,6 @@ class Api::CabinsController < ApplicationController
 
   private
   def cabin_params
-    params.require(:cabin).permit(:beds, :baths, :suite, :pets, :max_occupancy)
+    params.require(:cabin).permit(:beds, :baths, :suite, :pets, :max_occupancy, :reservations_id)
   end
 end

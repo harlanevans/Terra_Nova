@@ -1,4 +1,6 @@
 class Api::ReservationsController < ApplicationController
+# Before action of setting Cabin.
+
   def index
     render json: Reservation.all
   end
