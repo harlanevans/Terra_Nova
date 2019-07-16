@@ -22,7 +22,12 @@ class ReservationForm extends Component {
     this.handleDayClick = this.handleDayClick.bind(this);
     this.handleResetClick = this.handleResetClick.bind(this);
     this.state = this.getInitialState();
+    this.state = {
+      from: undefined,
+      to: undefined,
+    };
   }
+  
   getInitialState() {
     return {
       from: undefined,
@@ -36,6 +41,7 @@ class ReservationForm extends Component {
   handleResetClick() {
     this.setState(this.getInitialState());
   }
+
 
   // componentDidMount() {
   //   axios.post('/api/cabins')
@@ -79,6 +85,7 @@ class ReservationForm extends Component {
     this.setState({ rooms: '1', start_date: '', end_date: ''
     , kids: '', adults: ''})
   }
+
 
 // renderReservation = () => {
 //     //show page for reservation
@@ -124,8 +131,9 @@ class ReservationForm extends Component {
             numberOfMonths: 2,
             onDayClick: () => this.to.getInput().focus(),
           }}
-          onDayChange={this.handleFromChange}
-        />
+            onDayChange={this.handleFromChange}
+            onClick={this.handleResetClick}
+            />{' '}
           {/* <div class="label-div">
 
           <input 
@@ -158,6 +166,7 @@ class ReservationForm extends Component {
           <label>Departure</label><br />
           </div>
         <Form.Field>
+        {' '}
         <span className="InputFromTo-to">
           <DayPickerInput
             ref={el => (this.to = el)}
@@ -175,11 +184,12 @@ class ReservationForm extends Component {
               numberOfMonths: 2,
             }}
             onDayChange={this.handleToChange}
+            onClick={this.handleResetClick}
           />
         </span>
-        <button className="link" onClick={this.handleResetClick}>
-                Reset
-              </button>
+            <button className="link" onClick={this.handleResetClick}>
+                    Reset
+                  </button>
 
           {/* <input 
             placeholder="leave date" 

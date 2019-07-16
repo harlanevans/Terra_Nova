@@ -180,7 +180,10 @@ code {
 .Selectable .DayPicker-Day--end {
   border-top-right-radius: 50% !important;
   border-bottom-right-radius: 50% !important;
+  
 }
+
+
 
 .topnav {
   display: flex;
