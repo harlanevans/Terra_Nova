@@ -3,8 +3,10 @@ class CreateReservations < ActiveRecord::Migration[5.2]
     create_table :reservations do |t|
       t.integer :adults
       t.integer :kids
-      t.date :start_date
-      t.date :end_date
+      t.string :start_date
+      t.string :end_date
+      t.string :rooms
+      t.belongs_to :cabin, foreign_key: true
 
       t.timestamps
     end

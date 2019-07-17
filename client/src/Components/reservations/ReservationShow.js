@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import ReservationForm from './ReservationForm';
 import './ReservationShowStyle.css';
-import { Switch, Route, Link, NavLink, BrowserRouter as Router } from 'react-router-dom';
-import Rooms from './Rooms';
-import MakeReservation from './MakeReservation';
-import Confirmation from './Confirmation';
-import { Button, Breadcrumb } from 'semantic-ui-react'
+// import { Switch, Route, Link, NavLink, BrowserRouter as Router } from 'react-router-dom';
+// import Rooms from './Rooms';
+// import MakeReservation from './MakeReservation';
+// import Confirmation from './Confirmation';
+// import { Button, Breadcrumb } from 'semantic-ui-react'
 import BreadcrumbNav from './BreadcrumbNav';
 
 class ReservationShow extends Component {
