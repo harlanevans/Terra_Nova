@@ -3,6 +3,7 @@
 @baths = [1, 2]
 @max_occupancy = [5, 6, 7, 8, 9, 10]
 
+
 5.times do 
       @cabin = Cabin.create(
       beds: @beds.sample,
@@ -21,7 +22,4 @@
     rooms: '2',
     cabin_id: @cabin.id
       )
-      
-    end
 end
-puts "seeded cabins with a reservation"

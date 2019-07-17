@@ -238,9 +238,14 @@ code {
   padding: .5em;
 }
 
-.res {
+.resh1 {
   text-align: center;
   text-transform: uppercase;
+}
+
+.res {
+  display:flex;
+  justify-content: center;
 }
 
 .bg-white {
