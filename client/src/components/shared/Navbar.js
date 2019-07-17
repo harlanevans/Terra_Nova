@@ -48,7 +48,7 @@ class Navbar extends Component {
   render() {
     return(
       <Menu secondary className="navbar">
-        <Container>
+        <Container className="navbar_container">
         <Menu.Item className="navbar_item">
           <Image src = '../../../images/TN_horizontal_white_transparent-p-500.png' size='tiny'/>
         </Menu.Item>

@@ -9,7 +9,7 @@ import DayPickerInput from 'react-day-picker/DayPickerInput';
 import { formatDate, parseDate } from 'react-day-picker/moment';
 
 class ReservationForm extends Component {
-  state= { rooms: '1', start_date: new Date(), end_date: new Date(), 
+  state= { rooms: '1', to: new Date(), from: new Date(), 
    kids: 0, adults: 0}
 
   handleChange = (e) => {
@@ -131,7 +131,7 @@ class ReservationForm extends Component {
             numberOfMonths: 2,
             onDayClick: () => this.to.getInput().focus(),
           }}
-            onDayChange={this.handleFromChange}
+            onDayChange={this.handleDayClick}
             onClick={this.handleResetClick}
             />{' '}
           {/* <div class="label-div">
@@ -183,7 +183,7 @@ class ReservationForm extends Component {
               fromMonth: from,
               numberOfMonths: 2,
             }}
-            onDayChange={this.handleToChange}
+            onDayChange={this.handleDayClick}
             onClick={this.handleResetClick}
           />
         </span>
