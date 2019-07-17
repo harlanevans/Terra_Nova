@@ -6,8 +6,7 @@ import Card from 'react-bootstrap/Card';
 const GridExampleRelaxed = () => (
 
   
-  
-<Card className="bg-white">
+  <Card className="bg-white">
 <Container>
   <h1> Our Events </h1>
   <hr className="our-events-hr"/>
