@@ -6,18 +6,7 @@ import BraintreeDrop from '../braintree/BraintreeDrop';
 
 
 class MakeReservation extends Component {
-  state = { reservation: [], amount: 10 }
-
-  //do get request for reservations $ map reservations in render
-  // componentDidMount() {
-  //   axios.get(`/api/cabins/${cabin.id}`)
-  //   .then ( res => {
-  //     this.setState( {cabin: res.data })
-  //   })
-  //   .catch( err=> {
-  //     console.log(err);
-  //   })
-  // }
+  state = { amount: 10 }
 
   render() {
 
