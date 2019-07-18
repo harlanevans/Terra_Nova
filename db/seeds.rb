@@ -23,3 +23,4 @@
     cabin_id: @cabin.id
       )
 end
+end
