@@ -104,11 +104,11 @@ const Gallery = () => (
                 </div> */}
               </div>
             </figure>
-            <figure className="col-3@xs col-4@sm col-3@md picture-item" data-groups="[&quot;room&quot;]" data-title="RoomSuite">
+            <figure className="col-3@xs col-4@sm col-3@md picture-item" data-groups="[&quot;hotel&quot;]" data-title="Cabin">
               <div className="picture-item__inner">
                 <div className="aspect aspect--new">
                   <div className="aspect__inner">
-                    <Image src = '../../../images/gallery/icons8-room-100.png' size='small'/>
+                    <Image src = '../../../images/gallery/icons8-log-cabin-96-2.png' size='small'/>
                   </div>
                 </div>
                 {/* <div className="picture-item__details">

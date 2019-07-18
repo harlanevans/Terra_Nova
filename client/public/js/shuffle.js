@@ -7,6 +7,7 @@ class Demo {
       itemSelector: '.picture-item',
       sizer: element.querySelector('.my-sizer-element'),
     });
+    // window.location.reload()
 
     // Log events.
     this.addShuffleEventListeners();

@@ -6,6 +6,9 @@ class CreateCabins < ActiveRecord::Migration[5.2]
       t.boolean :suite
       t.boolean :pets
       t.integer :max_occupancy
+      t.decimal :price
+      t.string  :image
+      t.string  :description
       # t.belongs_to :reservations, foreign_key: true
 
       t.timestamps

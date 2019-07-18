@@ -14,7 +14,7 @@ const Footer = () => {
       <div style={{backgroundColor: "#73A288", paddingTop: '20px', paddingBottom: '20px' }}>
         <Container>
           <Grid.Row >
-            <Icon name='envelope outline' size='large' circular='true' bordered='true' color='brown' />
+            <Icon name='envelope outline' size='large' circular='true' border='true' color='brown' />
             <Input icon={<Icon name='arrow circle right' inverted circular link />} placeholder='Your Email Address' />
           </Grid.Row>
         </Container>
