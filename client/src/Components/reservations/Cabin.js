@@ -3,7 +3,7 @@ import { Grid, Image, Card } from 'semantic-ui-react'
 
 const Cabin = ({ beds, baths, max_occupancy, price, image, description }) => (
   <>
-  <div class="cabin">
+    <div class="cabin">
       <Grid.Column width={4}>
         <Card>
           <Image src={image} size="medium"/>
@@ -18,7 +18,7 @@ const Cabin = ({ beds, baths, max_occupancy, price, image, description }) => (
           </Card.Content>
         </Card>
       </Grid.Column>
-   </div>
+    </div>
   </>
 )
 

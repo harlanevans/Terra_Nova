@@ -6,8 +6,9 @@ import BraintreeDrop from '../braintree/BraintreeDrop';
 
 
 class MakeReservation extends Component {
-  state = { cabin: [], amount: 10 }
+  state = { reservation: [], amount: 10 }
 
+  //do get request for reservations $ map reservations in render
   // componentDidMount() {
   //   axios.get(`/api/cabins/${cabin.id}`)
   //   .then ( res => {
@@ -19,6 +20,7 @@ class MakeReservation extends Component {
   // }
 
   render() {
+
     const { beds, baths, max_occupancy, price } = this.props.location.state.cabin
 
     const { amount } = this.state
