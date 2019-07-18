@@ -19,7 +19,7 @@ class MakeReservation extends Component {
   // }
 
   render() {
-    const { beds, baths, max_occupancy } = this.props.location.state.cabin
+    const { beds, baths, max_occupancy, price } = this.props.location.state.cabin
 
     const { amount } = this.state
 
@@ -44,7 +44,7 @@ class MakeReservation extends Component {
               <h4>Max Occupancy:{max_occupancy}</h4>
             </Card.Content>
             <Card.Content extra>
-              Starting: $10/day
+              Starting: ${price}/day
           </Card.Content>
           </Card>
           {/* <h2>From: {start_date} to: {end_date}</h2> */}
