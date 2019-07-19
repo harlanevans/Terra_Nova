@@ -7,7 +7,7 @@ import axios from 'axios';
 import { Container } from 'semantic-ui-react';
 
 class Rooms extends Component {
-  state = { cabins: [], reservations: [], cabinsWithRes: [], amount: 10 }
+  state = { cabins: [], reservations: [], filterRes: [], amount: 10, showRes: false }
 
   //do get request for reservations $ map reservations in render
   componentDidMount() {
@@ -19,7 +19,8 @@ class Rooms extends Component {
       .catch(err => {
         console.log(err);
       })
-      this.renderStuff()
+ 
+      
 
 
     axios.get(`/api/reservations`)
@@ -29,8 +30,15 @@ class Rooms extends Component {
       .catch(err => {
         console.log(err);
       })
+           this.filterReservations()
 
  
+  }
+
+  toggleRes = ()  => {
+    const {showRes } = this.state;
+    this.setState({showRes: !showRes})
+    console.log(showRes)
   }
 
   
@@ -38,9 +46,12 @@ class Rooms extends Component {
   renderReservations = () => {
     const { reservations } = this.state;
     return(<div>
+      
    {reservations.map(r => (
      <div style={{fontSize: "1em", padding: '2em'}}>
-          {r.start_date}
+          Start: {r.start_date} <br />
+          End: {r.end_date} <br />
+          Cabin id: {r.cabin_id} <br />
         </div>
      
      )
@@ -49,17 +60,33 @@ class Rooms extends Component {
      )
   }
 
-  renderStuff = () => {
-    const {reservations} = this.state
+  filterReservations = () => {
+    const {filterRes, reservations} = this.state
     const { to, from } = this.props.location.state
-    const cabins = reservations.filter(reservation => {
 
-      if (reservation.start_date === from)
-        return cabins
+
+    for (let i = 0; i < reservations.length; i++) {
+      if (from < reservations[i].start_date)
+        return reservations[i]
       return 0
-    })
-    this.setState({ cabins: [...cabins] })
-  }
+    }
+    this.setState({ filterRes })
+          
+    }
+
+  //  reservations.map(r => {
+
+      // if (from < reservation.start_date && to > reservation.start_date && to < reservation.end_date && from < reservation.end_date)
+
+    //   console.log(from)
+    //   console.log(to)
+    //   if (from < r.start_date)
+    //     return r
+    //   return 0
+    // })
+    // this.setState({ filterRes })
+    // console.log(filterRes)
+  
 
   render() {
     const { cabins } = this.state
@@ -70,8 +97,26 @@ class Rooms extends Component {
           <p>Lorem Ipsum is simply dummy text of the printing</p>
         </header>
         <BreadcrumbNav />
-            {this.renderReservations()}
         <Container>
+{/* 
+          {this.renderReservations()}
+        <button onClick={this.toggleRes}>
+
+            Click me!
+        </button>
+          <button onClick={this.filterReservations}>
+
+            Test Filter
+        </button>
+        {this.state.showRes ? (
+          
+          <div>test{() => this.filterReservations()}</div>
+        )
+      : (
+        <div>Not working</div>
+      )} */}
+
+
           <div class="roomh1">
             <h1>Available Rooms</h1>
             <CabinList
