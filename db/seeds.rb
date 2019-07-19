@@ -10,6 +10,10 @@
 'https://images.unsplash.com/photo-1540520372776-d95dc8d21610?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
 'https://images.unsplash.com/photo-1548929374-a07f6b89de57?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjExNjMwfQ&auto=format&fit=crop&w=934&q=80']
 
+
+@sd = Date.new(2019,7,19)
+@ed = Date.new(2019,7,20)
+
 6.times do 
       @cabin = Cabin.create(
       beds: @beds.sample,
@@ -26,11 +30,14 @@
   Reservation.create(
     adults: 2,
     kids: 1,
-    start_date: "2019-07-16",
-    end_date: "2019-07-30",
+    start_date: @sd.strftime('%a %e %b %Y %H:%M:%S %z'),
+    end_date: @ed.strftime('%a %e %b %Y %H:%M:%S %z'),
+    # start_date: DateTime.strptime("07/16/2019 8:00", "%m/%d/%Y %H:%M"),
+    # end_date: DateTime.strptime("07/20/2019 8:00", "%m/%d/%Y %H:%M"),
     rooms: '2',
     cabin_id: @cabin.id
       )
 end
 end
+puts "Seeded"
 
