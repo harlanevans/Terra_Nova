@@ -6,8 +6,7 @@ import BraintreeDrop from '../braintree/BraintreeDrop';
 
 
 class MakeReservation extends Component {
-  state = { amount: 10 }
-
+  state = { amount: this.props.location.price }
   render() {
 
     const { beds, baths, max_occupancy, price, image, description } = this.props.location.state.cabin
@@ -46,8 +45,8 @@ class MakeReservation extends Component {
           <Icon name='payment' size='huge' />
           <br />
           <Label color='black'>Payment Amount</Label>
-          <Input value={amount} disabled style={{ fontSize: '18px' }} />
-          <BraintreeDrop amount={amount} />
+          <Input value={price} disabled style={{ fontSize: '18px' }} />
+          <BraintreeDrop amount={price} />
         </Segment>
       </>
     )
