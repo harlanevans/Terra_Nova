@@ -3,9 +3,13 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :cabins do
-      resources :reservations
-         get '/braintree_token', to: 'braintree#token'
-         post '/payment', to: 'braintree#payment'
+   
+      get '/braintree_token', to: 'braintree#token'
+      post '/payment', to: 'braintree#payment'
     end
+       resources :reservations
+      get "find_reservations", to: "reservations#find_reservations"
+    
   end
+
 end

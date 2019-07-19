@@ -6,18 +6,18 @@ import "../../../styles/Gallery.css";
 
 
 const Gallery = () => (
-    <div style={{ textAlign: 'center', backgroundColor: "#73A299" }}>
+    <div style={{ textAlign: 'center', backgroundColor: "#73A288", padding: '90px 0' }}>
       <Container>
         <Grid>
           <Grid.Row>
             <Grid.Column width={6} style={{ textAlign: 'center'}}></Grid.Column>
             <Grid.Column width={4} style={{ textAlign: 'center'}}>
               <Header as='h2' style={{ color: 'white' }}>Our Gallery</Header>
-                  <Divider horizontal>
-                    <Icon name='square full' size='large' color='brown' />
-                  </Divider>              
+              <div style={{ color: "#8A691E"}}>
+                 <h3> ── ▇ ── </h3>
+               </div>             
             </Grid.Column>
-            <Grid.Column width={6} style={{ textAlign: 'center'}}></Grid.Column>
+            <Grid.Column width={6} style={{ textAlign: 'center',}}></Grid.Column>
           </Grid.Row>
           {/* <Grid.Row>
             <div className='gallery_nav'>

@@ -14,6 +14,7 @@ import Confirmation from './components/reservations/Confirmation';
 import AboutUs from './components/shared/Landing_Page/About_Us';
 import Gallery from './components/shared/Landing_Page/Gallery';
 import Under_Construction from './components/shared/Landing_Page/Under_Construction';
+import Contact from './components/shared/Landing_Page/Contact';
 
 
 const App = () => (
@@ -29,6 +30,7 @@ const App = () => (
           <Route exact path='/rooms' component={Rooms} />
           <Route exact path='/makereservation/:id' component={MakeReservation} />
           <Route exact path='/confirmation' component={Confirmation} />
+          <Route exact path='/contact' component={Contact} />
 {/* routes for sttis psages with footer */}
           <Route exact path='/Under_Construction' component={Under_Construction} />
           <Route exact path='/About_Us' component={AboutUs} />

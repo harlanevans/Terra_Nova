@@ -4,10 +4,13 @@ import Card from 'react-bootstrap/Card';
 
 const GridExampleCelled = () => (
 
-  <Card className="bg-white">
+  
+  <Card  style={{padding: '90px 0', backgroundColor: "#C96C47", color: 'white'}}>
    <Container>
   <h1> News </h1>
-  <hr className="our-events-hr"/>
+  <div style={{ color: "#8A691E"}}>
+      <p> ──────────────── </p>
+  </div>
 
   <Grid divided columns={3}>
 
@@ -58,6 +61,7 @@ const GridExampleCelled = () => (
   
   </Container>
 </Card>
+
 )
 
 export default GridExampleCelled
