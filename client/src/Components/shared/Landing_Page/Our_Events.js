@@ -6,11 +6,14 @@ import Card from 'react-bootstrap/Card';
 const GridExampleRelaxed = () => (
 
   
-  <Card className="bg-white">
+  <Card className="bg-white" style={{padding: '90px 0'}}>
 <Container>
   <h1> Our Events </h1>
-  <hr className="our-events-hr"/>
+  <div style={{ color: "#8A691E"}}>
+      <h3> ──────────── </h3>
+  </div>
   
+  <div style={{ padding: '20px 0'}}>
   <Grid container columns={3}>
     <Grid.Column>
       <Image 
@@ -55,6 +58,7 @@ const GridExampleRelaxed = () => (
   </Card.ImgOverlay>
   </Grid.Column>
   </Grid>
+  </div>
   </Container>
 </Card>
 

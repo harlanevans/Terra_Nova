@@ -20,24 +20,24 @@ code {
   color: white;
   font-size: 4em;
   position: relative;
-  /* bottom: 550x; */
+  bottom: 400x;
   z-index: 5;
-  padding-bottom: 500px;
+  padding-bottom: 400px;
 }
 
 .carouselTitle2 {
   color: white;
   font-size: 4em;
   position: relative;
-  /* bottom: 400px; */
+  bottom: 350px;
   z-index: 4;
 }
 
 .carouselSubtTitle {
   color: white;
-  font-size: 2em;
+  font-size: 1.50em;
   position: relative;
-  bottom: 400px;
+  bottom: 300px;
   z-index: 3;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
