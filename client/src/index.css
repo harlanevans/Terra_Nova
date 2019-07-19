@@ -260,3 +260,12 @@ code {
 .our-events-hr {
   color: #9c9736b8
 }
+
+.bk-now {
+  background-color: #2C533C;
+  color:white;
+  border:none;
+  padding: 20px 37px;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}

@@ -11,6 +11,7 @@ class Navbar extends Component {
   rightNavItems = () => {
     const { auth: { user, handleLogout }, location, history } = this.props
 
+
     if (user) {
       return(
         
@@ -69,6 +70,7 @@ class Navbar extends Component {
         </Menu.Item>
         <Menu.Item className="navbar_item">
           <Link to="/contact">CONTACT</Link>
+
         </Menu.Item>
         </Container>
       </Menu>

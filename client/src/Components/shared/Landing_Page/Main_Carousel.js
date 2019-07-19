@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import { Button } from 'semantic-ui-react';
 
 
 class Main_Carousel extends React.Component {
@@ -78,7 +79,6 @@ class Main_Carousel extends React.Component {
     </Carousel.Item>
     </Carousel>
     </div>
-
     );
   }
 }

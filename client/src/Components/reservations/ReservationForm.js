@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Divider } from 'semantic-ui-react';
+import { Link } from 'react-router-dom'
 import axios from 'axios';
 import { Grid } from 'semantic-ui-react';
 import Calendar from 'react-calendar';
@@ -85,7 +86,7 @@ class ReservationForm extends Component {
     // add(this.state)
     //clear form
     this.setState({
-      rooms: '1', start_date: '', end_date: ''
+      rooms: '1', to: '', from: ''
       , kids: '', adults: ''
     })
   }
@@ -97,13 +98,12 @@ class ReservationForm extends Component {
   //     return rooms.map (cabin => <Reservation key={cabin.id} {...cabin} remove={this.deleteReservation} />)
   //   }
 
-  roomsWindow = () => {
-    window.location.assign('/rooms')
-  }
+  // roomsWindow = () => {
+    // window.location.assign('/rooms')
+  // }
 
   render() {
-    const { rooms, start_date, end_date, kids, adults } = this.state
-    const { from, to } = this.state;
+    const { rooms, to, from, kids, adults } = this.state
     const modifiers = { start: from, end: to };
     return (
       <>
@@ -278,11 +278,13 @@ class ReservationForm extends Component {
                 </Form.Field>
                 <Form.Field>
                   <div class="button-div">
+                    <Link to={{pathname: `/rooms`, state: {to, from}} } >
                     <button
                       class="button"
-                      onClick={this.roomsWindow}
-                    >
-                      Check Available</button>
+                      >
+                      Check Available
+                      </button>
+                      </Link>
                   </div>
                 </Form.Field>
               </Form>
