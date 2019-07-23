@@ -36,6 +36,7 @@ const App = () => (
           <Route exact path='/About_Us' component={AboutUs} />
           <Route exact path='/Gallery' component={Gallery} />
           <Route component={NoMatch} />
+
         </Switch>
       {/* </Container> */}
     </FetchUser>

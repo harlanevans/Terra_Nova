@@ -20,9 +20,9 @@ const About_Us = () => {
             </div>
               </Grid.Column>
           <Grid.Column>
-            <Placeholder style={{ height: 150, width: 150 }}>
-              <Placeholder.Image />
-            </Placeholder>
+            {/* <div style={{ height: 150, width: 150 }}> */}
+            <Image src = 'https://assets.website-files.com/5b1b0ce41a995ed190fdadb0/5c59f48d3405b22b0ccb5c44_elevations.jpg'size='large'/>
+            {/* </div> */}
         </Grid.Column>
         </Grid>
 
