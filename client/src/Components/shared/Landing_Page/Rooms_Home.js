@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Card, Placeholder, Header} from 'semantic-ui-react'
+import { Container, Card, Placeholder, Header, Image } from 'semantic-ui-react'
 
 
 class Rooms_Home extends React.Component {
@@ -7,7 +7,7 @@ class Rooms_Home extends React.Component {
   render () {
   return (
     
-    <div className="section" style={{ textAlign: 'center', backgroundColor: "#2C533C", padding: '450px 0' }}>
+    <div className="section" style={{ textAlign: 'center', backgroundColor: "#2C533C", padding: '650px 0' }}>
       <Container>
      
         <Header as='h2' style={{ color: 'white'}}> Our Rooms </Header>
@@ -25,9 +25,7 @@ class Rooms_Home extends React.Component {
         <Card.Group itemsPerRow={3}>
           <Card>
             <Card.Content>
-              <Placeholder>
-                <Placeholder.Image rectangular />
-              </Placeholder>
+            <Image src = '../../../images/our_rooms/2_Bedroom_.jpeg' size='medium'/>
             </Card.Content>
           </Card>
 
@@ -36,39 +34,29 @@ class Rooms_Home extends React.Component {
 
           <Card>
             <Card.Content>
-              <Placeholder>
-                <Placeholder.Image rectangular />
-              </Placeholder>
+            <Image src = '../../../images/our_rooms/2Bedroom.jpeg' size='medium'/>
             </Card.Content>
           </Card>
           <Card>
             <Card.Content>
-              <Placeholder>
-                <Placeholder.Image rectangular />
-              </Placeholder>
+            <Image src = '../../../images/our_rooms/2Hallway.jpeg' size='medium'/>
             </Card.Content>
           </Card>
         </Card.Group>
         <Card.Group itemsPerRow={3}>
           <Card>
             <Card.Content>
-              <Placeholder>
-                <Placeholder.Image rectangular />
-              </Placeholder>
+            <Image src = '../../../images/our_rooms/Cabin_Bathroom.jpeg' size='medium'/>
             </Card.Content>
           </Card>
           <Card>
             <Card.Content>
-              <Placeholder>
-                <Placeholder.Image rectangular />
-              </Placeholder>
+            <Image src = '../../../images/our_rooms/Cabin_SideAngle.jpeg' size='medium'/>
             </Card.Content>
           </Card>
           <Card>
             <Card.Content>
-              <Placeholder>
-                <Placeholder.Image rectangular />
-              </Placeholder>
+            <Image src = '../../../images/our_rooms/Hallway.jpeg' size='medium'/>
             </Card.Content>
           </Card>
         </Card.Group>
